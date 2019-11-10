@@ -1,0 +1,62 @@
+.modal {
+    opacity: 1 !important;
+    // overflow: hidden !important;
+    transition: opacity 1s;
+}
+#projects-section {
+    overflow-x: hidden;
+    height: 800px;
+    .projects-container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 80px 0px 30px 0px;
+      .projects-heading {
+          margin-bottom: 20px;
+        h1 {
+          font-weight: 1000;
+        }
+      }
+    }
+  }
+  
+  // mobile styles
+  @media screen and (max-width: 767px) {
+    #projects-section {
+      .projects-heading {
+        h1 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  
+  // desktop styles
+  @media screen and (min-width: 768px) {
+    #projects-section {
+      .projects-heading {
+        h1 {
+          font-size: 30px;
+        }
+      }
+      .projects-list {
+        
+      }
+   
+      .project-card {
+          margin-bottom: 10px;
+          .modal-backdrop.show {
+              opacity: 0.2 !important;
+          }
+        
+          .btn-default {
+              background-color: #e3e1ff !important;
+              padding-bottom: 15px !important;
+          }
+      }
+      .project-modal {
+        min-width: 85% !important;
+        margin-top: 80px !important;
+      }
+    }
+  }
+  

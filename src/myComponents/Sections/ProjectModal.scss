@@ -1,0 +1,50 @@
+.projectModal-container {
+  .project-details {
+    margin: 20px 0px;
+      h1 {
+        color: #0097a7;
+        text-transform: uppercase;
+      }
+      h2 {
+        color: lightgray;
+      }
+      p {
+        color: black;
+        text-align: justify;
+      }
+      .skillSet-list {
+      //   text-align: left;
+        margin: 15px 0px;
+        font-size: 16px;
+        div {
+          display: inline-table;
+          span {
+            padding: 1px 9px;
+            border-radius: 6px !important;
+            margin-right: 5px;
+            font-size: 13px;
+            color: white;
+            margin-top: 9px;
+          }
+        }
+ 
+      }
+
+    .project-dividerLine {
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .project-image {
+    img {
+      max-width: 100%;
+    }
+  }
+  .project-websiteLink {
+    text-align: center;
+    a {
+      color: white !important;
+      font-weight: bold;
+    }
+  }
+}

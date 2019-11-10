@@ -1,0 +1,155 @@
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.ravi {
+  height: 100vh;
+  width: 100vw;
+  background: #000000e3;
+  position: fixed;;
+  z-index: 100;
+}
+.landingPage-container {
+  text-align: center;
+  cursor: default;
+  p {
+    line-height: 25px !important;
+  }
+  #landingPage-bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .profile {
+    text-align: center;
+    .video-effect {
+      filter: brightness(0.8);
+    }
+    &__title {
+      h1 {
+        color: #2297ff82;
+        font-family: "Roboto Slab", "Times New Roman", serif;
+        font-weight: 700;
+        text-decoration: none;
+        // name duration timing-function delay iteration-count direction fill-mode;
+        animation: animate-title 1.5s ease-in-out 0s infinite alternate-reverse;
+        animation-play-state: round($number: 1);
+      }
+      margin-bottom: 20px;
+    }
+    &__description {
+      color: #b5b5b5;
+      font-weight: 100;
+      // name duration timing-function delay iteration-count direction fill-mode;
+      animation: animate-description 1.5s ease-in-out 0s infinite
+        alternate-reverse;
+      animation-play-state: round($number: 1);
+    }
+    &__image {
+      img {
+        opacity: 1;
+        border-radius: 10em;
+        object-fit: cover;
+        object-position: 100% 0;
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+  .profile {
+    &__title {
+      h1 {
+        font-size: 35px;
+      }
+    }
+    &__image {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+      .back {
+        display: none;
+      }
+    }
+  }
+}
+
+// desktop
+@media screen and (min-width: 768px) {
+  %flip-styling {
+    #f1_container {
+      position: relative;
+      margin: 10px auto;
+      width: 200px;
+      height: 200px;
+      z-index: 1;
+    }
+    #f1_container {
+      perspective: 1000;
+    }
+    #f1_card {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: all 0.5s linear;
+    }
+    #f1_container:hover #f1_card {
+      transform: rotateY(180deg);
+    }
+    .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    .face.back {
+      display: block;
+      transform: rotateY(180deg);
+      box-sizing: border-box;
+      color: white;
+      text-align: center;
+    }
+  }
+  .profile {
+    &__title {
+      h1 {
+        font-size: 35px;
+      }
+    }
+    &__description {
+      font-size: 20px;
+    }
+    &__image {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+      @extend %flip-styling;
+    }
+  }
+}
+
+@keyframes animate-title {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animate-description {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.2;
+  }
+}

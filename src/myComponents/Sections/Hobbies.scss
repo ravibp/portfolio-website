@@ -1,0 +1,44 @@
+// @import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";
+#hobbies-section {
+  overflow-x: hidden;
+  height: 800px;
+    .hobbies-container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 70+10px 0px 30px 0px;
+      .hobbies-heading {
+        h1 {
+          font-weight: 1000;
+        }
+      }
+    }
+  }
+  
+  // mobile styles
+  @media screen and (max-width: 767px) {
+    #hobbies-section {
+      .hobbies-heading {
+        h1 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  
+  // desktop styles
+  @media screen and (min-width: 768px) {
+    #hobbies-section {
+      .hobbies-heading {
+        margin-bottom: 30px;
+        h1 {
+          font-size: 30px;
+        }
+      }
+      .hobbies-gallery {
+        .ReactGridGallery_tile {
+          width: 18%;
+        }
+      }
+    }
+  }
+  

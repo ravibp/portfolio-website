@@ -1,0 +1,26 @@
+{
+  "name": "Ravi's Portfolio website",
+  "homepage": "https://ravibp.github.io/ravibp-portfolio/",
+  "authors": [
+    "Ravi BP"
+  ],
+  "description": "My Portfolio website using React.js, Bootstrap",
+  "main": "dist/index.js",
+  "keywords": [
+    "ravi-portfolio",
+    "material",
+    "design",
+    "material-ui",
+    "google",
+    "twitter"
+  ],
+  "license": "Ravi",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}

@@ -1,0 +1,189 @@
+{
+  "data": {
+    "profileName": "Ravi BP",
+    "currentJobTitle": "Systems Engineer - Full Stack Developer",
+    "expYrs": "2 yrs",
+    "introduction": "Experienced Web developer with sound programming and scripting skills. Eager to learn new technologies and adapt quickly to new frameworks. My aim is to apply 'Test driven' approach to develop fast, scalable, secure and responsive websites following agile methodologies.",
+    "experience": {
+      "projects": [
+        {
+          "dateFrom": "July-2019",
+          "dateTo": "present",
+          "jobTitle": "Systems Engineer",
+          "companyName": "Infosys Ltd",
+          "technologyTitle": "Fullstack: React.js - Redux, Node.js, Express.js, Apollo GraphQL, DynamoDB",
+          "projectDescription": "Developed API to implement Checkout and Payment feature for user be able to purchase items by adding to cart",
+          "projectResponsibilites": [
+            "Analyzed Schema for server-side cart checkout implementation.",
+            "Developed API to perform CRUD operation on cart items and coupons.",
+            "Implemented Coupon feature to provide discount for certain parts.",
+            "Validated API response with GraphQL playground.",
+            "Wrote Unit Tests for server code using moche and karma",
+            "Used Apollo GraphQL in front-end to fetch data for cart implementation.",
+            "Used Query Components with Apollo to handle API request in the client application."
+          ]
+        },
+        {
+          "dateFrom": "July-2018",
+          "dateTo": "Jun-2019",
+          "companyName": "Infosys Ltd",
+          "technologyTitle": "Frontend: React.js - Redux",
+          "projectDescription": "Developed a fast, scalable and responsive website for a US based E-Commerce company with test driven approach following agile methodologies.",
+          "projectResponsibilites": [
+            "Developed UI designs and wire frames into a functional web page with quality code.",
+            "Built re-usable components and front-end libraries to eliminate code duplication.",
+            "Developed searchable autosuggestion component to search available items",
+            "Developed items list UI which can be filtered by brands or categories to which they belong",
+            "Used Apollo GraphQL in front-end to fetch items information from DB.",
+            "Used Query Components with Apollo to handle API request in the application.",
+            "Have good understanding of SEO and it's best practices.",
+            "Wrote Unit Tests for UI components using Jest (Unit testing framework) with Enzyme (Testing Utility).",
+            "Used Pupeteer (Node Library) to run automated UI testing.",
+            "Used Sass with BEM naming for CSS styling."
+          ]
+        },
+        {
+          "dateFrom": "Nov-2017",
+          "dateTo": "June-2018",
+          "companyName": "Infosys Ltd",
+          "technologyTitle": "Angular 5",
+          "projectDescription": "Developed a MEAN stack application to implement CRUD operations for a portal to manage Employee details.",
+          "projectResponsibilites": [
+            "Created a Back-end server using Node.JS and Express.JS to handle http requests.",
+            "Created a Relational Database using MySQL for data storage and retrieval.",
+            "Created a Front-end application using Angular 5 and integrated it with the database and server."
+          ]
+        },
+        {
+          "dateFrom": "01-2016",
+          "dateTo": "07-2016",
+          "jobTitle": "Intern",
+          "companyName": "ISRO Satellite Centre",
+          "technologyTitle": "Matlab, VHDL",
+          "projectDescription": "Developed a Digital Telemetry transmitter prototype for IRS satellites",
+          "projectResponsibilites": [
+            "Applied the knowledge of communication principles in real time transmission of telemetry data.",
+            "Implemented the functionality of Digital Direct Synthesis with a 16-bit NCO.",
+            "Designed a DDS based telemetry system.",
+            "Simulated a Look-Up table based DDS and verified the output by simulating a pseudo code of the origical on MATLAB.",
+            "Synthesized the transmitter functionality onto a PROASIC board, and observed the Phase Modulated output, further updating the currently running frequency values using a MATLAB GUI."
+          ]
+        }
+      ]
+    },
+    "hackathon": [
+      {
+        "title": "Infosys Global Hackathon 2019",
+        "description": "Runner up in \"Infosys Global Hackathon 2019\" at Infosys, Trivandrum DC for developing a mobile application to help the visually challenged people to identify currency notes using Google Cloud Vision. (65 Teams)"
+      }
+    ],
+    "education": [
+      {
+        "dateFrom": "08-2013",
+        "dateTo": "07-2017",
+        "collegeName": "Bangalore Institute of Technology  |  75.42%",
+        "courseName": "Electronics & Communications Engineering, B.E"
+      },
+      {
+        "dateFrom": "08-2011",
+        "dateTo": "07-2013",
+        "collegeName": "Seshadripuram Composite PU College  |  90.5%",
+        "courseName": "PCME, P.U.C"
+      },
+      {
+        "dateFrom": "08-2011",
+        "dateTo": "07-2010",
+        "collegeName": "St.Joseph's Indian High School  |  92.96%",
+        "courseName": "S.S.L.C"
+      }
+    ],
+    "certificates": [
+      {
+        "year": "10-2017",
+        "title": "Front end Web Developer Nanodegree, Udacity."
+      },
+      {
+        "year": "12-2018",
+        "title": "JavaScript Proficiency Certification, Google Plural Sight."
+      },
+      {
+        "year": "06-2015",
+        "title": "Object Oriented Programming using C++, NIIT."
+
+      },
+      {
+        "year": "06-2019",
+        "title": "MongoDB Basics, MongoDBUniversity Online."
+      }
+    ],
+    "personalInformation": [
+      {
+        "infoHeading": "Address",
+        "infoDescription": "#20/1, Srirampuram, 4th cross, Bangalore 560021"
+      },
+      {
+        "infoHeading": "Phone",
+        "infoDescription": "919035804165"
+      },
+      {
+        "infoHeading": "E-mail",
+        "infoDescription": "ravibp95@gmail.com"
+      },
+      {
+        "infoHeading": "Date of birth",
+        "infoDescription": "03-07-1995"
+      },
+      {
+        "infoHeading": "GitHub",
+        "infoDescription": "https://github.com/ravibp"
+      },
+      {
+        "infoHeading": "LinkedIn",
+        "infoDescription": "https://www.linkedin.com/in/ravi-b-p-62612296/"
+      }
+    ],
+    "skills": [
+      {
+        "skillName": "JavaScript/ CSS/ HTML",
+        "rating": "8",
+        "skillDetails": ""
+      },
+      {
+        "skillName": "React.js - Redux (with React Hooks)",
+        "rating": "8",
+        "skillDetails": ""
+      },
+      {
+        "skillName": "MySQL,  MongoDB",
+        "rating": "8",
+        "skillDetails": ""
+      },
+      {
+        "skillName": "Node.js / Express.js",
+        "rating": "7",
+        "skillDetails": ""
+      },
+      {
+        "skillName": "Angular 5",
+        "rating": "5",
+        "skillDetails": ""
+      },
+      {
+        "skillName": "Apollo GraphQL",
+        "rating": "6",
+        "skillDetails": ""
+      },
+      {
+        "skillName": "Python",
+        "rating": "5",
+        "skillDetails": ""
+      },
+      {
+        "skillName": "Jest/ Enzyme",
+        "rating": "5",
+        "skillDetails": ""
+      }
+    ],
+    "languages": ["English", "Kannada", "Hindi"]
+  }
+}

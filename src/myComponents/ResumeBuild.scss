@@ -1,0 +1,254 @@
+$mainHeadingColor: #002e58;
+$subHeadingColor: #343434;
+$sectionLineBreakColor: #d5d6d6;
+%sectionsGlobal {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+%sectionHeadingGlobal {
+  width: 100%;
+  color: $mainHeadingColor;
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+%yearGlobal {
+  width: 20%;
+  > p {
+    font-weight: bold;
+  }
+}
+%divisionDetailsGlobal {
+  width: 80%;
+}
+%mainHeadingGlobal {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+%subHeadingGlobal {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 3px 0px;
+}
+%descriptionGlobal {
+  font-size: 13px;
+  line-height: 20px;
+}
+.resumeBuild-container {
+  div,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  // comment below lines for taking print out in PDF format to remove extra margins
+  padding: 15px 30px;
+  border: 1px solid lightgray;
+  width: 990px;
+  // Till here
+
+  line-height: 18px;
+  margin: auto;
+  background: white;
+  color: #343434;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: sans-serif;
+  .resumeBuild {
+    &__heading {
+      font-weight: 800 !important;
+      font-size: 40px !important;
+      line-height: 1.1em;
+      color: #002e58;
+    }
+    &__title {
+      line-height: 1.1em;
+      color: #002e58;
+      margin-top: 5px;
+      font-size: 20px !important;
+      font-weight: 400;
+    }
+    &__introduction {
+      color: #343434;
+      font-size: 13px;
+      font-weight: 400;
+      margin-top: 8px;
+    }
+    &__yoe {
+      color: #002e58;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+    &__sections {
+      // global styles
+      .sectionHeadingGlobal {
+        @extend %sectionHeadingGlobal;
+      }
+      .yearGlobal {
+        @extend %yearGlobal;
+      }
+      .sectionsGlobal {
+        @extend %sectionsGlobal;
+        > div {
+          width: 100%;
+        }
+        &__divisionsGlobal {
+          display: inline-flex !important;
+          margin: 10px 0px;
+          ul {
+            font-size: 14px;
+            list-style: initial;
+            margin-bottom: 15px;
+            margin: 0px;
+            padding-left: 15px;
+            li {
+              font-size: 13px;
+              margin: 0px;
+              padding: 0px;
+            }
+          }
+        }
+      }
+      .divisionDetailsGlobal {
+        @extend %divisionDetailsGlobal;
+      }
+      .mainHeadingGlobal {
+        @extend %mainHeadingGlobal;
+      }
+      .subHeadingGlobal {
+        @extend %subHeadingGlobal;
+      }
+      .descriptionGlobal {
+        @extend %descriptionGlobal;
+      }
+      .headingUnderlineGlobal {
+        text-decoration: underline;
+      }
+      // left section styles
+      .left-sections {
+        width: 70%;
+        display: inline-block;
+        padding-right: 2rem;
+        vertical-align: top;
+        .experience {
+          &__project {
+            &__companyName {
+              text-transform: initial;
+              font-style: italic;
+            }
+            &__responsibilities {
+              margin: 3px 0px;
+              font-weight: bold;
+            }
+          }
+        }
+        .education {
+          &__project {
+            &__jobTitle {
+              font-size: 15px !important;
+            }
+          }
+        }
+        .hackathon {
+          &__division {
+            margin: 10px 0px;
+          }
+          &__project {
+            margin-left: 20%;
+            &__jobTitle {
+              font-weight: bold;
+            }
+          }
+        }
+        .certificates {
+          &__division {
+            margin-top: 7px !important;
+            margin-bottom: 0px !important;
+          }
+        }
+      }
+      .right-sections {
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 2em;
+        .personalInfo {
+          &__heading {
+            margin: 7px 0px 0px 0px !important;
+          }
+        }
+        .skills {
+          &__division {
+            margin-top: 5px;
+            margin-bottom: 5px;
+          }
+          &__rating {
+            min-height: 10px;
+            min-width: 100%;
+            display: inline-block;
+          }
+          &__ratingBar {
+            min-height: 10px;
+            min-width: 100%;
+            text-align: left;
+            background-color: #d5d6d6 !important;
+          }
+          &__ratingBarFill {
+            min-height: 10px;
+            background-color: #003d74 !important;
+          }
+          &__description {
+            // text-align: right;
+            text-align: justify;
+            color: darkcyan;
+          }
+        }
+        .languages {
+          &__list {
+            margin-top: 5px;
+            > div {
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .icon {
+    display: inline-flex;
+    border-bottom: 1px solid $sectionLineBreakColor;
+    h3 {
+      // margin: 8px 0px 0px 5px;
+      margin: 8px 0px 0px 0px;
+    }
+    svg {
+      fill: white !important;
+      margin: 0px 5px 5px 0px;
+      width: 35px;
+      height: 35px;
+      background-color: $mainHeadingColor;
+      padding: 4px;
+    }
+  }
+}
