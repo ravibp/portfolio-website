@@ -16,6 +16,16 @@
           font-weight: 1000;
         }
       }
+      .project-card {
+        h4.card-title {
+          min-height: 40px;
+        }
+        p.card-text {
+          min-height: 30px;
+          line-height: initial !important;
+        }
+
+      }
     }
   }
   

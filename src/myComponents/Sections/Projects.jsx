@@ -5,10 +5,8 @@ import { MDBContainer, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } 
 import "./Projects.scss";
 import ProjectModal from "./ProjectModal";
 import ScrollAnimation from "react-animate-on-scroll";
-import * as ImagesJSON from 'assets/img/Images.json';
 import * as ProjectsJSON from 'myComponents/Sections/Projects.json';
 
-const Images = ImagesJSON.default;
 const projects = ProjectsJSON.default;
 
 const colorClass = [
@@ -25,7 +23,8 @@ const ProjectCard = (props) => {
     return (
         <MDBCol>
             <MDBCard style={{ maxWidth: "22rem" }}>
-                <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
+                <MDBCardImage className="img-fluid project-image" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
+               
                 <MDBCardBody>
                     <MDBCardTitle>{project.title}</MDBCardTitle>
                     <MDBCardText>
