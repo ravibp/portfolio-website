@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio-website/static/css/main.396d5b75.chunk.css",
+    "main.js": "/portfolio-website/static/js/main.e6bf9945.chunk.js",
+    "main.js.map": "/portfolio-website/static/js/main.e6bf9945.chunk.js.map",
+    "runtime~main.js": "/portfolio-website/static/js/runtime~main.7784a2cd.js",
+    "runtime~main.js.map": "/portfolio-website/static/js/runtime~main.7784a2cd.js.map",
+    "static/css/2.d3cbed1b.chunk.css": "/portfolio-website/static/css/2.d3cbed1b.chunk.css",
+    "static/js/2.7714210b.chunk.js": "/portfolio-website/static/js/2.7714210b.chunk.js",
+    "static/js/2.7714210b.chunk.js.map": "/portfolio-website/static/js/2.7714210b.chunk.js.map",
+    "index.html": "/portfolio-website/index.html",
+    "precache-manifest.3252f0a5c0457186d99f866d9d8d5013.js": "/portfolio-website/precache-manifest.3252f0a5c0457186d99f866d9d8d5013.js",
+    "service-worker.js": "/portfolio-website/service-worker.js",
+    "static/css/2.d3cbed1b.chunk.css.map": "/portfolio-website/static/css/2.d3cbed1b.chunk.css.map",
+    "static/css/main.396d5b75.chunk.css.map": "/portfolio-website/static/css/main.396d5b75.chunk.css.map",
+    "static/media/Icon1.c8ae7fc3.svg": "/portfolio-website/static/media/Icon1.c8ae7fc3.svg",
+    "static/media/Icon2.4fbe41c0.svg": "/portfolio-website/static/media/Icon2.4fbe41c0.svg",
+    "static/media/Icon3.8b31567b.svg": "/portfolio-website/static/media/Icon3.8b31567b.svg",
+    "static/media/IconAngular.abfc3b93.svg": "/portfolio-website/static/media/IconAngular.abfc3b93.svg",
+    "static/media/IconBootstrap.ffded238.svg": "/portfolio-website/static/media/IconBootstrap.ffded238.svg",
+    "static/media/IconCSS.15678ffe.svg": "/portfolio-website/static/media/IconCSS.15678ffe.svg",
+    "static/media/IconGraphQL.5bf8a3ca.svg": "/portfolio-website/static/media/IconGraphQL.5bf8a3ca.svg",
+    "static/media/IconHTML.d84fde66.svg": "/portfolio-website/static/media/IconHTML.d84fde66.svg",
+    "static/media/IconMongoDB.52783a2f.svg": "/portfolio-website/static/media/IconMongoDB.52783a2f.svg",
+    "static/media/IconMySQL.60c2bdb8.svg": "/portfolio-website/static/media/IconMySQL.60c2bdb8.svg",
+    "static/media/IconNodeJS.b337a2fb.svg": "/portfolio-website/static/media/IconNodeJS.b337a2fb.svg",
+    "static/media/IconPhotoshop.44676395.svg": "/portfolio-website/static/media/IconPhotoshop.44676395.svg",
+    "static/media/IconReact.05a3e30f.svg": "/portfolio-website/static/media/IconReact.05a3e30f.svg",
+    "static/media/mdb.css": "/portfolio-website/static/media/arrow_right.8ef6a08c.svg"
+  }
+}
