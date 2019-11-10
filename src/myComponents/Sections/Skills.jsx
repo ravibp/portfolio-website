@@ -41,16 +41,17 @@ class Skills extends React.Component {
       window.removeEventListener("scroll", this.animateSkills);
     }
   }
-  displaySkillsCategory = () => {
+
+  displaySkillsCategory = (handleAnimateDurationDestkop) => {
     return (
       <div>
-        <ScrollAnimation animateOnce={true} animateIn="bounceInRight" delay={1}>
+        <ScrollAnimation animateOnce={true} animateIn="bounceInRight" delay={1} duration={handleAnimateDurationDestkop(0)}>
           <h3>What I can do</h3>
         </ScrollAnimation>
         <ScrollAnimation
           animateOnce={true}
           animateIn="bounceInRight"
-          duration={isMobileOnly ? 1 : 3}
+          duration={handleAnimateDurationDestkop(3)}
           delay={1}
         >
           <ul>
@@ -74,6 +75,7 @@ class Skills extends React.Component {
     );
   };
   render() {
+    const { handleAnimateDurationDestkop } = this.props
     return (
       <div id="skills-section" className={" "}>
         <div className="row no-gutters skills-container">
@@ -82,6 +84,7 @@ class Skills extends React.Component {
               animateOnce={true}
               offset={0}
               delay={1}
+              duration={handleAnimateDurationDestkop(1)}
               animateIn="tada"
               initiallyVisible={true}
             >
@@ -89,7 +92,7 @@ class Skills extends React.Component {
             </ScrollAnimation>
           </div>
           <div className="d-none d-lg-block col-lg-3 skills-category">
-            {this.displaySkillsCategory()}
+            {this.displaySkillsCategory(handleAnimateDurationDestkop)}
           </div>
           <div
             className="col-12 col-sm-6 col-md-6 col-lg-4 skills-diagram"
@@ -98,12 +101,12 @@ class Skills extends React.Component {
             <ScrollAnimation
               animateOnce={true}
               animateIn="flipInY"
-              duration={isMobileOnly ? 1 : 5}
+              duration={handleAnimateDurationDestkop(5)}
             >
               <ScrollAnimation
                 animateOnce={true}
                 animateIn="bounceInRight"
-                duration={isMobileOnly ? 1 : 3}
+                duration={handleAnimateDurationDestkop(3)}
               >
                 <div className="circle-wrapper" ref="circle-wrapper-ref">
                   <div className="circle circle-1"></div>
@@ -181,7 +184,7 @@ class Skills extends React.Component {
               animateOnce={true}
               animateIn="flipInX"
               initiallyVisible={true}
-              duration={isMobileOnly ? 1 : 3}
+              duration={handleAnimateDurationDestkop(3)}
             >
               <SkillsBar />
             </ScrollAnimation>
@@ -238,7 +241,7 @@ class Skills extends React.Component {
           </div>
 
           <div className="d-block d-lg-none col-12 skills-category">
-            {this.displaySkillsCategory()}
+            {this.displaySkillsCategory(handleAnimateDurationDestkop)}
           </div>
         </div>
       </div>

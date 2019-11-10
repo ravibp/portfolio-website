@@ -55,7 +55,7 @@ class Projects extends React.Component {
     }
 
     render() {
-
+        const { handleAnimateDurationDestkop } = this.props
         return (
             <div id="projects-section">
                 <div className="row projects-container">
@@ -66,6 +66,7 @@ class Projects extends React.Component {
                             delay={1}
                             animateIn="tada"
                             initiallyVisible={true}
+                            duration={handleAnimateDurationDestkop(1)}
                         >
                             <h1>PROJECTS</h1>
                         </ScrollAnimation>

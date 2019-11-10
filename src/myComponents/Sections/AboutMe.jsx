@@ -19,6 +19,7 @@ class AboutMe extends React.Component {
     }
   }
   render() {
+    const { handleAnimateDurationDestkop } = this.props
     return (
       <div id="aboutMe-section">
         <div className="row no-gutters aboutMe-container">
@@ -26,6 +27,7 @@ class AboutMe extends React.Component {
             <ScrollAnimation
               animateOnce={true}
               offset={0}
+              duration={handleAnimateDurationDestkop(1)}
               delay={1}
               animateIn="tada"
               initiallyVisible={true}
@@ -39,8 +41,8 @@ class AboutMe extends React.Component {
               <ScrollAnimation
                 animateOnce={true}
                 animateIn="bounceInRight"
+                duration={handleAnimateDurationDestkop(2)}
                 delay={1}
-                duration={isMobileOnly ? 1 : 2}
               >
                 <img
                   src={Images.sections.aboutMe.aboutMeImg}
@@ -56,7 +58,7 @@ class AboutMe extends React.Component {
               animateOnce={true}
               animateIn="bounceInRight"
               delay={1}
-              duration={isMobileOnly ? 1 : 3}
+              duration={handleAnimateDurationDestkop(3)}
             >
               <h4 className="col-12">Hi! I'm Ravi,</h4>
               <p className="col-12">
@@ -81,7 +83,7 @@ class AboutMe extends React.Component {
               animateOnce={true}
               animateIn="bounceInRight"
               delay={1}
-              duration={isMobileOnly ? 1 : 3}
+              duration={handleAnimateDurationDestkop(3)}
             >
               <div className="col-12 aboutMe__cv">
                 <a href="/resume" target="_blank">

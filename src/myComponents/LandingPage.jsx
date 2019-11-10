@@ -42,14 +42,16 @@ class LandingPage extends React.Component {
   }
   handleLandingVideo() {
     let renderedVideo = null;
-    if (isMobileOnly) {
+    if (!isMobileOnly) {
       renderedVideo = Images.landingPage.bgVideo;
     } else {
       renderedVideo = Images.landingPage.bgVideoMobile;
     }
     return renderedVideo;
   }
-
+  handleAnimateDurationDestkop = (duration) => {
+    return (isMobileOnly ? 0 : duration)
+  }
   render() {
     const { classes } = this.props;
     return (
@@ -106,9 +108,9 @@ class LandingPage extends React.Component {
           )}
         >
           <div className="landingPage-container__sections-container">
-            {/* <AboutMe id="aboutMe-div" /> */}
-            {/* <Skills id="skills-div" /> */}
-            <Projects id="projects-div" />
+            <AboutMe id="aboutMe-div" handleAnimateDurationDestkop={this.handleAnimateDurationDestkop} />
+            <Skills id="skills-div" handleAnimateDurationDestkop={this.handleAnimateDurationDestkop}/>
+            <Projects id="projects-div" handleAnimateDurationDestkop={this.handleAnimateDurationDestkop}/>
             {/* <Hobbies id="hobbies-div" /> */}
           </div>
         </div>
