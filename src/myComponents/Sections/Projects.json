@@ -14,18 +14,18 @@
         "title": "Dev Connector",
         "secondarytTitle": "Social Network App for developers",
         "description": [
-            "Small social network app built with the MERN stack.",
+            "A small social network app built with the MERN stack.",
             "It includes authentication, profiles and forum posts."
         ],
         "skillSet": "React.js/ Redux.js, Node.js, Express.js, MongoDB, Postman",
         "websiteURL": "https://ravibp-devconnector-app.herokuapp.com/",
-        "imageURL": "https://lh3.googleusercontent.com/lFrTSHv7iTtxG40MzNvFwxrteOMvx6A8OF_TMqnhhbwNBGSlsw6GIgqMspYYMcfONphtzz75XOtN-O1QRwzKjlo4J9-NzQXveV1sbugTxIdOtc_3PhkfKw41vMamT0o0wXtVqrucwHsWwkLJ99GLMPztkayo-43sNWr7sAqluOXlYf3cZzL17CL8Y209IwWUoijO7jgbXd-ZZn5UGMC6ahy7-y2R-Px6LgUYPqUnmaXr-5ZfUt7fAkZBhejYZIX8rEQRvghm4Zx_FKaElhTjdgIMafI0XIKAU-7oYkStcbmNu51401Bs1w0XTwM15JZ6HYuNs8g7VooeZWq4jtRWTXh0rIMYhb4huVcqu-uBPtXxfJ1EpdH42XmWjyGknPXbJcRUKmWRGM6cIQsl1w-6OcybIsQJ5VVkqLPP5tgCoT1Ms4AoXD3SqPwzw7QejFOU4JvoYAknTv2nomgkeSUn7gy-emShJ5DG2cz6AgKf_Ze8bJOyInFyFI7GtbHfUX8vTpKEPWqmbxo1AGftSS1lD9dUZPMh6NM2GEmCL1KgVO3In09gIU93tGWK5rtzXEbfsqs1h4m2UzZUiTHEwA7AQ4aU4KypuCNNC61KryttRUn7l_cHfTjIDYjheD0tna0hvlEhNdWrrfEadDseRXhMosn0zZ2WK9LjFMlOTdMPdegrZpjj8c230A=w1244-h633-no"
+        "imageURL": "https://lh3.googleusercontent.com/f33WpFJUUnnLLORlNQkXJG5IggBkvyA3N-pj-IbcmEprSZjmOYGSfKzo5xQK5woumxHn9rn_-SzsD09URl5Fm4KYhZOIWYKAGf_kpcqHz4r7CrgjGPpVFzWfoszj1kEwq4MQAlwWB-fA0gZnuA95w3vgthF37LSHVpB1aaYp2TfRccVHpcTgFmBshwzqq78vJCeGPlGtF4cpyMgJDbCCNyCsB9vnLEQU6CvtIlIDbzs3y2pEIlnRpgljqj1GrumNIlPMW3wRdaBCdtT_Iu9rJ8MyctcwRjnb_vFMnPact1sI7YEbTnxBrTil0XBzEYm7YSALMA-DjATSJfq5Vu_j37-7dc6OHgRH1IY6HB7IC-6GauYZjEMraibUlxpe6ImMgP-EaWEJ3hZyif7oGIJRCD5qTXwKBHrPE19lrqt4IBCSzRSXd9LvFIUrElgjNTm-Mnc94LNtzHkRTuEhrtehpjOqWYEbhZ3IPcke6XatG3AJpdfl0A7w7TOD7WB0htIeEdbAl73swaEfun7naFxBzUDjTmHR15QHpgBaC9nkXGkCpys3mexiCXwh_v6OuWuj4rXozge4Ygdeevxx1XfORKMAmObChwXxqmASV0369gfmK6jVim2BAJkIGdNURioTdOWke_kOvq-fDs5HGDDxFcWxkH7MArY-7n3l9TxkN-4D8SF4kHL8iQ=w525-h382-no"
     },
     {
         "title": "Clipboard Application",
         "secondarytTitle": "Clipboard notes App with Login feature ",
         "description": [
-            "It is a simple application with CRUD functionality that can be used to create, save, edit notes and access it from any device on the go",
+            "A simple application with CRUD functionality that can be used to create, save, edit notes and access it from any device on the go",
             "It has google firebase login feature implemented for individual user access and privacy."
         ],
         "skillSet": "React.js/ Redux.js, Firebase",
@@ -34,29 +34,7 @@
     },
     {
         "title": "Arcade Game",
-        "secondarytTitle": "Simple JS Game of dodging enemies to gain points.",
-        "description": [
-            "Player have to score the best points possible with 10 lives in hand within 5 minutes",
-            ""
-        ],
-        "skillSet": "React.js/ Redux.js, UI/ UX, Node.js, Express.js, Apollo GraphQL, DynamoDB, Jest, Enzyme, Postman, SoupUI ",
-        "websiteURL": "https://clipboard-application.web.app/",
-        "imageURL": "https://lh3.googleusercontent.com/lFrTSHv7iTtxG40MzNvFwxrteOMvx6A8OF_TMqnhhbwNBGSlsw6GIgqMspYYMcfONphtzz75XOtN-O1QRwzKjlo4J9-NzQXveV1sbugTxIdOtc_3PhkfKw41vMamT0o0wXtVqrucwHsWwkLJ99GLMPztkayo-43sNWr7sAqluOXlYf3cZzL17CL8Y209IwWUoijO7jgbXd-ZZn5UGMC6ahy7-y2R-Px6LgUYPqUnmaXr-5ZfUt7fAkZBhejYZIX8rEQRvghm4Zx_FKaElhTjdgIMafI0XIKAU-7oYkStcbmNu51401Bs1w0XTwM15JZ6HYuNs8g7VooeZWq4jtRWTXh0rIMYhb4huVcqu-uBPtXxfJ1EpdH42XmWjyGknPXbJcRUKmWRGM6cIQsl1w-6OcybIsQJ5VVkqLPP5tgCoT1Ms4AoXD3SqPwzw7QejFOU4JvoYAknTv2nomgkeSUn7gy-emShJ5DG2cz6AgKf_Ze8bJOyInFyFI7GtbHfUX8vTpKEPWqmbxo1AGftSS1lD9dUZPMh6NM2GEmCL1KgVO3In09gIU93tGWK5rtzXEbfsqs1h4m2UzZUiTHEwA7AQ4aU4KypuCNNC61KryttRUn7l_cHfTjIDYjheD0tna0hvlEhNdWrrfEadDseRXhMosn0zZ2WK9LjFMlOTdMPdegrZpjj8c230A=w1244-h633-no"
-    },
-    {
-        "title": "Dev Connector",
-        "secondarytTitle": "Social Network App for developers",
-        "description": [
-            "Small social network app built with the MERN stack.",
-            "It includes authentication, profiles and forum posts."
-        ],
-        "skillSet": "React.js/ Redux.js, Node.js, Express.js, MongoDB, Postman",
-        "websiteURL": "https://ravibp-devconnector-app.herokuapp.com/",
-        "imageURL": "https://lh3.googleusercontent.com/lFrTSHv7iTtxG40MzNvFwxrteOMvx6A8OF_TMqnhhbwNBGSlsw6GIgqMspYYMcfONphtzz75XOtN-O1QRwzKjlo4J9-NzQXveV1sbugTxIdOtc_3PhkfKw41vMamT0o0wXtVqrucwHsWwkLJ99GLMPztkayo-43sNWr7sAqluOXlYf3cZzL17CL8Y209IwWUoijO7jgbXd-ZZn5UGMC6ahy7-y2R-Px6LgUYPqUnmaXr-5ZfUt7fAkZBhejYZIX8rEQRvghm4Zx_FKaElhTjdgIMafI0XIKAU-7oYkStcbmNu51401Bs1w0XTwM15JZ6HYuNs8g7VooeZWq4jtRWTXh0rIMYhb4huVcqu-uBPtXxfJ1EpdH42XmWjyGknPXbJcRUKmWRGM6cIQsl1w-6OcybIsQJ5VVkqLPP5tgCoT1Ms4AoXD3SqPwzw7QejFOU4JvoYAknTv2nomgkeSUn7gy-emShJ5DG2cz6AgKf_Ze8bJOyInFyFI7GtbHfUX8vTpKEPWqmbxo1AGftSS1lD9dUZPMh6NM2GEmCL1KgVO3In09gIU93tGWK5rtzXEbfsqs1h4m2UzZUiTHEwA7AQ4aU4KypuCNNC61KryttRUn7l_cHfTjIDYjheD0tna0hvlEhNdWrrfEadDseRXhMosn0zZ2WK9LjFMlOTdMPdegrZpjj8c230A=w1244-h633-no"
-    },
-    {
-        "title": "Arcade Game",
-        "secondarytTitle": "It is the exciting game to cross the path avoiding collision with incoming enemies within a specific time.",
+        "secondarytTitle": "A simple JS Game of dodging enemies to gain points.",
         "description": [
             "Player have to score the best points possible with 10 lives in hand within 5 minutes",
             ""

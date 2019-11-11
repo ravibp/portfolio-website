@@ -21,7 +21,7 @@ class ProjectModal extends React.Component {
   }
   render() {
     const { project } = this.props;
-    const href= this.props.project ? this.props.project.websiteURL : "";
+    const href = this.props.project ? this.props.project.websiteURL : "";
     return (
       <div className="row projectModal-container">
         <div id="test"></div>
@@ -29,7 +29,7 @@ class ProjectModal extends React.Component {
           <h1>{project.title}</h1>
           <h2>{project.secondarytTitle}</h2>
           {project.description.map((desc, index1) => (
-            <p key={index1}>{desc}</p>
+            <li key={index1}>{desc}</li>
           ))}
           <div className="skillSet-list">
             {project.skillSet.split(",").map((skill, index2) => {
@@ -49,12 +49,11 @@ class ProjectModal extends React.Component {
           <a target="_blank" href={href}>
             <img src={project.imageURL} alt={project.title} />
           </a>
-
         </div>
         <br />
 
         <div className="col-12 project-websiteLink">
-          <MDBBtn color="primary"><a target="_blank" rel='noopener noreferrer' href={href}>View Website</a></MDBBtn>
+          <a target="_blank" rel='noopener noreferrer' href={href}>View Website</a>
         </div>
       </div>
     );

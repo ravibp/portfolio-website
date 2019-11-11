@@ -21,16 +21,15 @@ const colorClass = [
 const ProjectCard = (props) => {
     const { project } = props
     return (
-        <MDBCol>
+        <MDBCol className="">
             <MDBCard style={{ maxWidth: "22rem" }}>
-                <MDBCardImage className="img-fluid project-image" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
-               
+                <MDBCardImage className="img-fluid project-image" src={project.imageURL} waves />
                 <MDBCardBody>
                     <MDBCardTitle>{project.title}</MDBCardTitle>
                     <MDBCardText>
                         {project.secondarytTitle}
                     </MDBCardText>
-                    <MDBBtn>View Details</MDBBtn>
+                    <MDBBtn gradient="blue">View Details</MDBBtn>
                 </MDBCardBody>
             </MDBCard>
         </MDBCol>
@@ -77,7 +76,7 @@ class Projects extends React.Component {
                             {projects.map((project, index1) => {
                                 let projectCard = (
                                     <div className="col-12 col-md-4 col-lg-3 project-card">
-                                        <MDBBtn onClick={() => {
+                                        <MDBBtn className="" onClick={() => {
                                             this.toggle()
                                             this.setState({
                                                 project: project

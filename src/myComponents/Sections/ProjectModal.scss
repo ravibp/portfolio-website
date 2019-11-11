@@ -1,34 +1,37 @@
 .projectModal-container {
   .project-details {
     margin: 20px 0px;
-      h1 {
-        color: #0097a7;
-        text-transform: uppercase;
-      }
-      h2 {
-        color: lightgray;
-      }
-      p {
-        color: black;
-        text-align: justify;
-      }
-      .skillSet-list {
-      //   text-align: left;
-        margin: 15px 0px;
-        font-size: 16px;
-        div {
-          display: inline-table;
-          span {
-            padding: 1px 9px;
-            border-radius: 6px !important;
-            margin-right: 5px;
-            font-size: 13px;
-            color: white;
-            margin-top: 9px;
-          }
+    h1 {
+      color: #0097a7;
+      text-transform: uppercase;
+    }
+    h2 {
+      color: lightgray;
+    }
+    p {
+      color: black;
+      text-align: justify;
+    }
+    li {
+      text-align: justify;
+      margin-left: 18px;
+      font-size: 13px;
+    }
+    .skillSet-list {
+      margin: 15px 0px;
+      font-size: 16px;
+      div {
+        display: inline-table;
+        span {
+          padding: 1px 9px;
+          border-radius: 6px !important;
+          margin-right: 5px;
+          font-size: 13px;
+          color: white;
+          margin-top: 9px;
         }
- 
       }
+    }
 
     .project-dividerLine {
       width: 100%;
@@ -39,13 +42,32 @@
     img {
       cursor: pointer;
       max-width: 100%;
+
     }
+  }
+  div.project-image {
+    text-align: center;
   }
   .project-websiteLink {
     text-align: center;
+    margin-bottom: 15px;
     a {
+      text-decoration: none !important;
       color: white !important;
+      transition: 1s all;
+      transition: background-color 0.5s;
+      font-size: 15px;
+      background-color: #ff3c00b8;
+      padding: 15px;
+      border-radius: 10px;
+      transition: color 0.5s;
       font-weight: bold;
+    }
+    a:hover {
+      transition: background-color 0.5s;
+      background-color: #ff3c00b8;
+      transition: color 0.5s, font-weight 0.5s;
+      color: black !important;
     }
   }
 }
