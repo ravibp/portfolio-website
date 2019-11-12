@@ -25,21 +25,22 @@ class LandingPage extends React.Component {
   constructor(props) {
     super(props);
     this.handleLandingVideo = this.handleLandingVideo.bind(this);
-    // document.getElementById("root").style.opacity = "0";
+    document.getElementById("root").style.opacity = "0";
   }
   componentDidMount() {
     if (!isMobileOnly) {
-      // document.getElementById('aboutMe-section').style.backgroundImage = Images.sections.aboutMe.bgImg;
-      // document.getElementById('skills-section').style.backgroundImage = Images.sections.skills.bgImg;
+      document.getElementById('aboutMe-section').style.backgroundImage = `url(${Images.sections.aboutMe.bgImg})`;
+      document.getElementById('skills-section').style.backgroundImage = `url(${Images.sections.skills.bgImg})`;
     }
     else {
-      // document.getElementById('aboutMe-section').style.backgroundImage = Images.sections.aboutMe.bgImgMobile;
-      // document.getElementById('skills-section').style.backgroundImage = Images.sections.skills.bgImgMobile;
+      document.getElementById('aboutMe-section').style.backgroundImage = `url(${Images.sections.aboutMe.bgImgMobile})`;
+      document.getElementById('skills-section').style.backgroundImage = `url(${Images.sections.skills.bgImgMobile})`;
     }
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 100);
   }
+
   handleLandingVideo() {
     let renderedVideo = null;
     if (!isMobileOnly) {
@@ -71,7 +72,7 @@ class LandingPage extends React.Component {
                               src={Images.profileImg[0]}
                               alt="ravi bp"
                               onLoad={() => {
-                                // console.log("loaded img");
+                                console.log("loaded img");
                               }}
                             />
                           </div>
@@ -107,10 +108,11 @@ class LandingPage extends React.Component {
             classes.mainRaised + "  ml-0 mr-0 pl-0 pr-0"
           )}
         >
+          <div id="hamburgerOverlay-ref" className="hamburger-overlay"></div>
           <div className="landingPage-container__sections-container">
             <AboutMe id="aboutMe-div" handleAnimateDurationDestkop={this.handleAnimateDurationDestkop} />
-            <Skills id="skills-div" handleAnimateDurationDestkop={this.handleAnimateDurationDestkop}/>
-            <Projects id="projects-div" handleAnimateDurationDestkop={this.handleAnimateDurationDestkop}/>
+            <Skills id="skills-div" handleAnimateDurationDestkop={this.handleAnimateDurationDestkop} />
+            <Projects id="projects-div" handleAnimateDurationDestkop={this.handleAnimateDurationDestkop} />
             {/* <Hobbies id="hobbies-div" /> */}
           </div>
         </div>

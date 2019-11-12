@@ -14,12 +14,12 @@ class Parallax extends React.Component {
     };
   }
   showRenderedPage() {
-    // const spinnerComponent = document.querySelector(".loader");
-    // const appComponent = document.querySelector("#root");
-    // appComponent.style.opacity = "1";
-    // appComponent.style.transition = "opacity 1s";
-    // spinnerComponent.style.opacity = "0";
-    // spinnerComponent.style.transition = "opacity 1s";
+    const spinnerComponent = document.querySelector(".loader");
+    const appComponent = document.querySelector("#root");
+    appComponent.style.opacity = "1";
+    appComponent.style.transition = "opacity 1s";
+    spinnerComponent.style.opacity = "0";
+    spinnerComponent.style.transition = "opacity 1s";
   };
   componentDidMount() {
     var windowScrollTop = window.pageYOffset / 3;

@@ -42,7 +42,6 @@
     img {
       cursor: pointer;
       max-width: 100%;
-
     }
   }
   div.project-image {
@@ -68,6 +67,34 @@
       background-color: #ff3c00b8;
       transition: color 0.5s, font-weight 0.5s;
       color: black !important;
+    }
+  }
+  .modal-header {
+    background-color: #0000002b;
+    button.close {
+      outline: none !important;
+    }
+    button.close > span {
+      font-size: 20px;
+    }
+  }
+}
+
+// mobile styles
+@media screen and (max-width: 767px) {
+  #projects-section {
+    .modal-content {
+      margin: 0px 15px;
+    }
+    .modal-body {
+      max-height: 511px;
+      overflow: scroll;
+    }
+  }
+
+  .projectModal-container {
+    .project-websiteLink {
+      margin-top: 30px;
     }
   }
 }

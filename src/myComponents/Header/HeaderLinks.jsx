@@ -3,7 +3,7 @@ import { isMobileOnly } from "react-device-detect";
 import React from "react";
 
 class HeaderLinks extends React.Component {
-  
+
   render() {
     return (
       <div className="headerLinks">
@@ -33,7 +33,7 @@ class HeaderLinks extends React.Component {
                 // "hobbies-section"
               ]}
               currentClassName="is-current"
-              offset={!isMobileOnly? -10: -200}
+              offset={!isMobileOnly ? -10 : -200}
             >
               <li onClick={this.props.handleDrawerToggle}>
                 <a href="#aboutMe-section">About</a>
@@ -44,9 +44,12 @@ class HeaderLinks extends React.Component {
               <li onClick={this.props.handleDrawerToggle}>
                 <a href="#projects-section">Projects</a>
               </li>
-              {/* <li onClick={this.props.handleDrawerToggle}>
-                <a href="#hobbies-section">Gallery</a>
-              </li> */}
+              {isMobileOnly && <li onClick={() => {
+                this.props.handleDrawerToggle();
+                window.scroll(0, 0);
+              }}>
+                <a>Back to Top</a>
+              </li>}
             </Scrollspy>
           </div>
         </div>

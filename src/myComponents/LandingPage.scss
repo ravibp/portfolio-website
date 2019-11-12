@@ -1,14 +1,8 @@
 
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-}
-.ravi {
-  height: 100vh;
-  width: 100vw;
-  background: #000000e3;
-  position: fixed;;
-  z-index: 100;
 }
 .landingPage-container {
   text-align: center;
@@ -35,7 +29,7 @@ html {
         font-family: "Roboto Slab", "Times New Roman", serif;
         font-weight: 700;
         text-decoration: none;
-        // name duration timing-function delay iteration-count direction fill-mode;
+        //SYNTAX: name duration timing-function delay iteration-count direction fill-mode;
         animation: animate-title 1.5s ease-in-out 0s infinite alternate-reverse;
         animation-play-state: round($number: 1);
       }
@@ -44,7 +38,7 @@ html {
     &__description {
       color: #b5b5b5;
       font-weight: 100;
-      // name duration timing-function delay iteration-count direction fill-mode;
+      // SYNTAX: name duration timing-function delay iteration-count direction fill-mode;
       animation: animate-description 1.5s ease-in-out 0s infinite
         alternate-reverse;
       animation-play-state: round($number: 1);
@@ -64,6 +58,14 @@ html {
 
 // mobile
 @media screen and (max-width: 767px) {
+  .hamburger-overlay {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: transparent;
+    transition: all 0.5s;
+    z-index: 0;
+  }
   .profile {
     &__title {
       h1 {

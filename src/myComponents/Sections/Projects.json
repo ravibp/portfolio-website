@@ -15,7 +15,10 @@
         "secondarytTitle": "Social Network App for developers",
         "description": [
             "A small social network app built with the MERN stack.",
-            "It includes authentication, profiles and forum posts."
+            "It has Login/ Signup feature to maintain and protect user access",
+            "Authenticated User can create profile and upload posts in the community forums",
+            "Other Users can reply to the posts posted by other developers"
+            
         ],
         "skillSet": "React.js/ Redux.js, Node.js, Express.js, MongoDB, Postman",
         "websiteURL": "https://ravibp-devconnector-app.herokuapp.com/",
@@ -36,8 +39,9 @@
         "title": "Arcade Game",
         "secondarytTitle": "A simple JS Game of dodging enemies to gain points.",
         "description": [
-            "Player have to score the best points possible with 10 lives in hand within 5 minutes",
-            ""
+            "The game has 3 difficulty modes",
+            "The Objective is to reach from start to destination without getting hit by the enemies",
+            "Player have to score the best points possible with 10 lives in hand within 5 minutes"
         ],
         "skillSet": "React.js/ Redux.js, UI/ UX, Node.js, Express.js, Apollo GraphQL, DynamoDB, Jest, Enzyme, Postman, SoupUI ",
         "websiteURL": "https://clipboard-application.web.app/",

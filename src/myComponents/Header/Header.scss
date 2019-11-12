@@ -136,12 +136,10 @@
   .header-headerLinks {
     transition: 0.5s all ease-in-out;
   }
-
 }
 
 // mobile
 @media screen and (max-width: 767px) {
-
   .drawer-hide {
     margin-top: -250px;
   }
@@ -163,7 +161,11 @@
       z-index: 999;
       top: 30px;
       left: 30px;
+      span {
+        background: #ff7600 !important;
+      }
     }
+
     ul {
       display: block !important;
     }
@@ -174,13 +176,19 @@
         font-weight: 1000;
       }
     }
+    .headerLinks__rightLinks {
+      li:last-child {
+        margin-top: 20px;
+        > a {
+          font-weight: initial !important;
+        }
+      }
+    }
   }
   .scrolledHeader-style {
-    .header-headerLinks {
-    }
     .headerLinks {
       a {
-        color: black !important;
+        color: white !important;
       }
     }
   }

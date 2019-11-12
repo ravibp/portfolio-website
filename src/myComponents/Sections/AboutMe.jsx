@@ -8,16 +8,7 @@ import * as ImagesJSON from 'assets/img/Images.json';
 const Images = ImagesJSON.default;
 
 class AboutMe extends React.Component {
-  componentDidMount() {
-    if (!isMobileOnly) {
-      document.getElementById('aboutMe-section').style.backgroundImage = `url(${Images.sections.aboutMe.bgImg})`;
-      document.getElementById('skills-section').style.backgroundImage = `url(${Images.sections.skills.bgImg})`;
-    }
-    else {
-      document.getElementById('aboutMe-section').style.backgroundImage = `url(${Images.sections.aboutMe.bgImgMobile})`;
-      document.getElementById('skills-section').style.backgroundImage = `url(${Images.sections.skills.bgImgMobile})`;
-    }
-  }
+
   render() {
     const { handleAnimateDurationDestkop } = this.props
     return (
@@ -75,8 +66,7 @@ class AboutMe extends React.Component {
               <p className="col-12">A picture is worth a thousand words...</p>
               <p className="col-12">
                 As the picture says creating digital art is one of my favorite
-                hobbies. You can find more of my digital art in the hobbies
-                section.
+                hobbies.
               </p>
             </ScrollAnimation>
             <ScrollAnimation
@@ -93,7 +83,7 @@ class AboutMe extends React.Component {
               <div className="col-12 aboutMe__socialMediaLinks">
                 <a target="_blank" rel='noopener noreferrer' href="https://www.facebook.com/Maverick.M4"><i className="fab fa-facebook"></i></a>
                 <a target="_blank" rel='noopener noreferrer' href="https://www.facebook.com/Maverick.M4"><i className="fab fa-twitter"></i></a>
-                <a target="_blank" rel='noopener noreferrer' href="https://github.com/ravibp"><i className="fab fa-linkedin"></i></a>
+                <a target="_blank" rel='noopener noreferrer' href="https://www.linkedin.com/in/ravibp"><i className="fab fa-linkedin"></i></a>
                 <a target="_blank" rel='noopener noreferrer' href="https://github.com/ravibp"><i className="fab fa-github"></i></a>
               </div>
             </ScrollAnimation>

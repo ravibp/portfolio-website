@@ -23,7 +23,7 @@ const ProjectCard = (props) => {
     return (
         <MDBCol className="">
             <MDBCard style={{ maxWidth: "22rem" }}>
-                <MDBCardImage className="img-fluid project-image" src={project.imageURL} waves />
+                <MDBCardImage alt="project image" className="img-fluid project-image" src={project.imageURL} waves />
                 <MDBCardBody>
                     <MDBCardTitle>{project.title}</MDBCardTitle>
                     <MDBCardText>
