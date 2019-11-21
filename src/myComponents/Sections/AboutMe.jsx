@@ -3,7 +3,6 @@ import React from "react";
 
 import "./AboutMe.scss";
 import ScrollAnimation from "react-animate-on-scroll";
-import { isMobileOnly } from "react-device-detect";
 import * as ImagesJSON from 'assets/img/Images.json';
 const Images = ImagesJSON.default;
 
@@ -76,13 +75,13 @@ class AboutMe extends React.Component {
               duration={handleAnimateDurationDestkop(3)}
             >
               <div className="col-12 aboutMe__cv">
-                <a href="/resume" target="_blank">
+                <a href="/portfolio-website/resume" target="_blank">
                   Get My CV
                 </a>
               </div>
               <div className="col-12 aboutMe__socialMediaLinks">
-                <a target="_blank" rel='noopener noreferrer' href="https://www.facebook.com/Maverick.M4"><i className="fab fa-facebook"></i></a>
-                <a target="_blank" rel='noopener noreferrer' href="https://www.facebook.com/Maverick.M4"><i className="fab fa-twitter"></i></a>
+                <a target="_blank" rel='noopener noreferrer' href="https://www.facebook.com/ravibp95"><i className="fab fa-facebook"></i></a>
+                {/* <a target="_blank" rel='noopener noreferrer' href="https://www.facebook.com/Maverick.M4"><i className="fab fa-twitter"></i></a> */}
                 <a target="_blank" rel='noopener noreferrer' href="https://www.linkedin.com/in/ravibp"><i className="fab fa-linkedin"></i></a>
                 <a target="_blank" rel='noopener noreferrer' href="https://github.com/ravibp"><i className="fab fa-github"></i></a>
               </div>

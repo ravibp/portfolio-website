@@ -1,6 +1,7 @@
 import Scrollspy from "react-scrollspy";
-import { isMobileOnly } from "react-device-detect";
 import React from "react";
+
+const isMobileOnly = window.innerWidth <= 767 ? true : false;
 
 class HeaderLinks extends React.Component {
 

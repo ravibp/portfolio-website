@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.scss";
 import HeaderLinks from "./HeaderLinks.jsx";
 import HamburgerMenu from "react-hamburger-menu";
-import { isMobileOnly } from "react-device-detect";
+const isMobileOnly = window.innerWidth <= 767 ? true : false;
 
 class Header extends React.Component {
   constructor(props) {

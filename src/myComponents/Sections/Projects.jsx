@@ -29,7 +29,7 @@ const ProjectCard = (props) => {
                     <MDBCardText>
                         {project.secondarytTitle}
                     </MDBCardText>
-                    <MDBBtn gradient="blue">View Details</MDBBtn>
+                    <div gradient="blue">View Details</div>
                 </MDBCardBody>
             </MDBCard>
         </MDBCol>
@@ -75,8 +75,8 @@ class Projects extends React.Component {
                         <div className="projects-list row">
                             {projects.map((project, index1) => {
                                 let projectCard = (
-                                    <div className="col-12 col-md-4 col-lg-3 project-card">
-                                        <MDBBtn className="" onClick={() => {
+                                    <div key={index1} className="col-12 col-md-4 col-lg-3 project-card">
+                                        <MDBBtn onClick={() => {
                                             this.toggle()
                                             this.setState({
                                                 project: project

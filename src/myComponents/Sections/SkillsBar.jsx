@@ -1,7 +1,8 @@
 import React from "react";
 import AnimatedNumber from "animated-number-react";
 import "./SkillsBar.scss";
-import { isMobileOnly } from "react-device-detect";
+
+const isMobileOnly = window.innerWidth <= 767 ? true : false;
 
 const skillsJson = [
   {

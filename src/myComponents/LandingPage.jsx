@@ -16,16 +16,23 @@ import Skills from "myComponents/Sections/Skills.jsx";
 // import Hobbies from "myComponents/Sections/Hobbies.jsx";
 import Footer from "myComponents/Footer/Footer.jsx";
 import "./LandingPage.scss";
-import { isMobileOnly } from "react-device-detect";
 import * as ImagesJSON from 'assets/img/Images.json';
 
 const Images = ImagesJSON.default;
+const isMobileOnly = window.innerWidth <= 767 ? true : false;
 
 class LandingPage extends React.Component {
   constructor(props) {
     super(props);
     this.handleLandingVideo = this.handleLandingVideo.bind(this);
-    document.getElementById("root").style.opacity = "0";
+    this.showLoadingScreen()
+  }
+  showLoadingScreen = () => {
+    const appComponent = document.getElementById("root");
+    appComponent.style.opacity = "0";
+    appComponent.style.height = "100vh";
+    appComponent.style.overflowY = "hidden";
+
   }
   componentDidMount() {
     if (!isMobileOnly) {
@@ -48,7 +55,7 @@ class LandingPage extends React.Component {
     } else {
       renderedVideo = Images.landingPage.bgVideoMobile;
     }
-    return renderedVideo;
+    return [renderedVideo, Images.landingPage.bgVideoThumbnail];
   }
   handleAnimateDurationDestkop = (duration) => {
     return (isMobileOnly ? 0 : duration)

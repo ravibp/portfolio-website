@@ -18,7 +18,8 @@ import { ReactComponent as Icon3 } from "assets/icons/Icon3.svg";
 
 import ReactTooltip from "react-tooltip";
 import ScrollAnimation from "react-animate-on-scroll";
-import { isMobileOnly } from "react-device-detect";
+
+const isMobileOnly = window.innerWidth <= 767 ? true : false;
 
 class Skills extends React.Component {
   animationForward() {
@@ -32,6 +33,9 @@ class Skills extends React.Component {
     }
   };
   componentDidMount() {
+    let skillContainerHeight = document.getElementById("skills-section").clientHeight;
+    this.refs["skillsOpacity-ref"].style.height = `${skillContainerHeight}px`
+    
     if (!isMobileOnly) {
       window.addEventListener("scroll", this.animateSkills);
     }
@@ -77,7 +81,8 @@ class Skills extends React.Component {
   render() {
     const { handleAnimateDurationDestkop } = this.props
     return (
-      <div id="skills-section" className={" "}>
+      <div id="skills-section">
+        <div id="skillsOpacity" ref="skillsOpacity-ref"></div>
         <div className="row no-gutters skills-container">
           <div className="col-12 skills-heading">
             <ScrollAnimation

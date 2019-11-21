@@ -2,10 +2,15 @@
 // common styles
 #skills-section {
   overflow-x: hidden;
+  #skillsOpacity {
+    position: absolute;
+    width: 100%;
+    // height: 100%;
+    background: #00000063;
+  }
   .skills-container {
     max-width: 1300px;
     margin: auto;
-    background: #00000063;
   }
   .skills-heading {
     height: fit-content;
