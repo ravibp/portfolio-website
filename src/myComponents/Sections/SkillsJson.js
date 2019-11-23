@@ -13,7 +13,7 @@ import { bootstrapLabelClasses, handleAos } from "../GlobalConstants";
 export const skillsJson = [
     [{
       skillName: "HTML5",
-      skillRating: "90",
+      skillRating: 90,
       skillId: "skill-html",
       skillTitleColor: "darkred",
       skillBarColor: "#03A9F4",
@@ -24,7 +24,7 @@ export const skillsJson = [
     },
     {
       skillName: "CSS3",
-      skillRating: "90",
+      skillRating: 90,
       skillId: "skill-css",
       skillTitleColor: "darkblue",
       skillBarColor: "#03A9F4",
@@ -35,8 +35,8 @@ export const skillsJson = [
     }],
     [{
       skillName: "MongoDB",
-      skillRating: "80",
-      skillId: "skill-database",
+      skillRating: 80,
+      skillId: "skill-mongodb",
       skillTitleColor: "darkyellow",
       skillBarColor: "#03A9F4",
       skillClassName: "circle-2",
@@ -46,8 +46,8 @@ export const skillsJson = [
     },
     {
       skillName: "MySQL",
-      skillRating: "70",
-      skillId: "skill-database",
+      skillRating: 70,
+      skillId: "skill-mysql",
       skillTitleColor: "darkyellow",
       skillBarColor: "#03A9F4",
       skillClassName: "circle-2",
@@ -57,7 +57,7 @@ export const skillsJson = [
     },
     {
       skillName: "NodeJs",
-      skillRating: "75",
+      skillRating: 75,
       skillId: "skill-nodejs",
       skillTitleColor: "darkblue",
       skillBarColor: "#03A9F4",
@@ -69,7 +69,7 @@ export const skillsJson = [
     [
       {
         skillName: "Apollo GraphQL",
-        skillRating: "50",
+        skillRating: 50,
         skillId: "skill-graphql",
         skillTitleColor: "darkgreen",
         skillBarColor: "#03A9F4",
@@ -80,7 +80,7 @@ export const skillsJson = [
       },
       {
         skillName: "Bootstrap 4",
-        skillRating: "80",
+        skillRating: 80,
         skillId: "skill-bootstrap",
         skillTitleColor: "darkred",
         skillBarColor: "#03A9F4",
@@ -91,7 +91,7 @@ export const skillsJson = [
       },
       {
         skillName: "Photoshop CC",
-        skillRating: "60",
+        skillRating: 60,
         skillId: "skill-photoshop",
         skillTitleColor: "darkred",
         skillBarColor: "#03A9F4",
@@ -102,7 +102,7 @@ export const skillsJson = [
       },
       {
         skillName: "ReactJs/ Redux",
-        skillRating: "90",
+        skillRating: 90,
         skillId: "skill-react",
         skillTitleColor: "darkyellow",
         skillBarColor: "#03A9F4",
@@ -113,7 +113,7 @@ export const skillsJson = [
       },
       {
         skillName: "Angular 4",
-        skillRating: "60",
+        skillRating: 60,
         skillId: "skill-angular",
         skillTitleColor: "blue",
         skillBarColor: "#03A9F4",

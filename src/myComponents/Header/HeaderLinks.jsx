@@ -5,7 +5,7 @@ const isMobileOnly = window.innerWidth <= 767 ? true : false;
 
 class HeaderLinks extends React.Component {
   handleScrollToDiv = (id) => {
-    const offset = isMobileOnly ? 700 : 710;
+    const offset = isMobileOnly ? 700 : 770;
     window.scrollTo(0, document.getElementById(id).offsetTop + offset)
   }
   render() {

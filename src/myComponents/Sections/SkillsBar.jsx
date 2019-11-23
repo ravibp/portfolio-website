@@ -5,9 +5,12 @@ import { skillsJson } from 'myComponents/Sections/SkillsJson';
 
 const isMobileOnly = window.innerWidth <= 767 ? true : false;
 const skillsArray = [];
-skillsJson.forEach(skillArr => 
+skillsJson.forEach(skillArr =>
   skillArr.forEach(skillObj => skillsArray.push(skillObj))
 )
+
+skillsArray.sort((a, b) =>
+  (b.skillRating - a.skillRating))
 
 class SkillsBar extends React.Component {
   constructor(props) {
@@ -94,10 +97,11 @@ class SkillsBar extends React.Component {
     return false;
   }
   render() {
+    const { handleAos } = this.props
     return (
       <div className="skillBar-container row no-gutters">
         {skillsArray.map((skill, index) => (
-          <div key={index} className="row col-12 no-gutters">
+          <div  {...handleAos("fade-left", 0, 500, -250)} key={index} className="row col-12 no-gutters">
             <div className="skillBar-container__title col-3">{skill.skillName}</div>
             <div className="skillBar-container__progressBar col-7">
               <div

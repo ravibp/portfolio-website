@@ -84,10 +84,11 @@ class Skills extends React.Component {
             className="col-12 col-sm-6 col-md-6 col-lg-5 skills-bar"
             ref="skills-bar-ref"
           >
-            <SkillsBar />
+            <SkillsBar handleAos={handleAos} />
           </div>
 
           <div
+            {...handleAos("fade-up", 0, 500, -250)}
             className="col-12 col-md-12 skills-details"
             ref="skills-details-ref"
           >
@@ -100,7 +101,7 @@ class Skills extends React.Component {
             ))}
           </div>
 
-          <div className="d-block d-lg-none col-12 skills-category">
+          <div {...handleAos("fade-up", 0, 500, -250)} className="d-block d-lg-none col-12 skills-category">
             {this.displaySkillsCategory()}
           </div>
         </div>

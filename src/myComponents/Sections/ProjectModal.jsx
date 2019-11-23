@@ -1,15 +1,21 @@
 import React from "react";
 import "./ProjectModal.scss";
-import {bootstrapLabelClasses} from "../GlobalConstants";
+import { bootstrapLabelClasses } from "../GlobalConstants";
+import Img from 'react-image'
 
 class ProjectModal extends React.Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true
+    }
+  }
   render() {
     const { project } = this.props;
+    const { loading } = this.state;
     const href = this.props.project ? this.props.project.websiteURL : "";
     return (
       <div className="row projectModal-container">
-        <div id="test"></div>
         <div className="col-12 col-md-6 project-details">
           <h1>{project.title}</h1>
           <h2>{project.secondarytTitle}</h2>
@@ -31,8 +37,19 @@ class ProjectModal extends React.Component {
           </div>
         </div>
         <div className="col-12 col-md-6 project-image">
-          <a target="_blank" href={href} rel="noopener noreferrer">
-            <img src={project.imageURL} alt={project.title} />
+          <a
+            target="_blank" href={href} rel="noopener noreferrer">
+            <Img  src={project.imageURL} alt={project.title} style={{
+              opacity: loading ? "0" : "100",
+              transition: "opacity 2s"
+            }}
+              onLoad={() => {
+                this.setState({
+                  loading: false,
+                })
+              }}
+              loader={<img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="loading..." />}
+            />
           </a>
         </div>
         <br />

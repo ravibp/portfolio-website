@@ -57,7 +57,7 @@ class Projects extends React.Component {
                         <div className="projects-list row">
                             {projects.map((project, index1) => {
                                 let projectCard = (
-                                    <div {...handleAos("fade-up", 0, 500, 0)} key={index1} className="col-12 col-md-4 col-lg-3 project-card">
+                                    <div {...handleAos("fade-up", 0, 500, -200)} key={index1} className="col-12 col-md-4 col-lg-3 project-card">
                                         <MDBBtn onClick={() => {
                                             this.toggle()
                                             this.setState({
@@ -74,7 +74,7 @@ class Projects extends React.Component {
                             <MDBModal className="project-modal" isOpen={this.state.modal} toggle={this.toggle} centered size="lg">
                                 <MDBModalHeader toggle={this.toggle} />
                                 <MDBModalBody>
-                                    <ProjectModal {...handleAos("fade-up", 0, 500, 0)} project={this.state.project} />
+                                    <ProjectModal project={this.state.project} />
                                 </MDBModalBody>
                             </MDBModal>
                         </div>

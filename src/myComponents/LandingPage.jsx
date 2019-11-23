@@ -17,7 +17,7 @@ import Skills from "myComponents/Sections/Skills.jsx";
 import Footer from "myComponents/Footer/Footer.jsx";
 import "./LandingPage.scss";
 import * as ImagesJSON from 'assets/img/Images.json';
-import {handleAos} from "./GlobalConstants";
+import { handleAos } from "./GlobalConstants";
 
 const Images = ImagesJSON.default;
 const isMobileOnly = window.innerWidth <= 767 ? true : false;
@@ -29,10 +29,10 @@ class LandingPage extends React.Component {
     this.showLoadingScreen()
   }
   showLoadingScreen = () => {
-    const appComponent = document.getElementById("root");
-    appComponent.style.opacity = "0";
-    appComponent.style.height = "100vh";
-    appComponent.style.overflowY = "hidden";
+    // const appComponent = document.getElementById("root");
+    // appComponent.style.opacity = "0";
+    // appComponent.style.height = "100vh";
+    // appComponent.style.overflowY = "hidden";
   }
   componentDidMount() {
     if (!isMobileOnly) {
@@ -67,17 +67,11 @@ class LandingPage extends React.Component {
               <div className="row">
                 <div className="col-12 col-md-12">
                   <a href="#aboutMe-section">
-                    <div className="profile__image">
-                      <div id="f1_container">
-                        <div id="f1_card" className="">
-                          <div className="front face">
-                            <img
-                              src={Images.profileImg[0]}
-                              alt="ravi bp"
-                              onLoad={() => {
-                                console.log("loaded img");
-                              }}
-                            />
+                    <div className="profile__image" >
+                      <div id="f1_container" >
+                        <div id="f1_card" >
+                          <div className="front face" >
+                            <img src={Images.profileImg[0]} alt="ravi bp 2" />
                           </div>
                           <div className="back face center">
                             <img src={Images.profileImg[1]} alt="ravi bp 2" />
