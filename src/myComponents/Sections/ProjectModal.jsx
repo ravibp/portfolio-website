@@ -1,24 +1,9 @@
 import React from "react";
-import { MDBBtn } from 'mdbreact';
-
 import "./ProjectModal.scss";
-import ScrollAnimation from "react-animate-on-scroll";
+import {bootstrapLabelClasses} from "../GlobalConstants";
 
-import * as ImagesJSON from 'assets/img/Images.json';
-const Images = ImagesJSON.default;
-
-const colorClass = [
-  "label-default",
-  "label-primary",
-  "label-info",
-  "label-danger",
-  "label-success",
-  "label-warning"
-];
 class ProjectModal extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+
   render() {
     const { project } = this.props;
     const href = this.props.project ? this.props.project.websiteURL : "";
@@ -34,8 +19,8 @@ class ProjectModal extends React.Component {
           <div className="skillSet-list">
             {project.skillSet.split(",").map((skill, index2) => {
               let rand =
-                colorClass[
-                Math.floor(Math.random() * colorClass.length)
+                bootstrapLabelClasses[
+                Math.floor(Math.random() * bootstrapLabelClasses.length)
                 ];
               return (
                 <div key={index2}>
@@ -46,7 +31,7 @@ class ProjectModal extends React.Component {
           </div>
         </div>
         <div className="col-12 col-md-6 project-image">
-          <a target="_blank" href={href}>
+          <a target="_blank" href={href} rel="noopener noreferrer">
             <img src={project.imageURL} alt={project.title} />
           </a>
         </div>

@@ -1,11 +1,10 @@
 @import "skillsCircleSmall";
 // common styles
 #skills-section {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   #skillsOpacity {
     position: absolute;
     width: 100%;
-    // height: 100%;
     background: #00000063;
   }
   .skills-container {
@@ -41,15 +40,6 @@
       height: 400px;
       width: 400px;
       margin: 0px auto;
-    }
-    div.circle-wrapper--clicked {
-      animation-name: animate_skillRotateCW !important;
-      animation-duration: 2s !important;
-      animation-timing-function: ease-in-out;
-    }
-    div.circle-wrapper--unClicked {
-      animation-name: animate_skillRotateACW;
-      animation-timing-function: ease-in-out;
     }
     div.circle {
       position: absolute;
@@ -343,16 +333,6 @@
           }
         }
       }
-      .skills-bar--clicked {
-        transform: scale(1) !important;
-        transition: all 1s ease-in-out !important;
-        opacity: 1 !important;
-      }
-      .skills-bar {
-        transform: scale(0);
-        transition: all 0.5s;
-        opacity: 0;
-      }
     }
   }
 
@@ -425,22 +405,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes animate_skillRotateCW {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-720deg);
-  }
-}
-@keyframes animate_skillRotateACW {
-  from {
-    transform: rotate(-720deg);
-  }
-  to {
-    transform: rotate(0deg);
   }
 }

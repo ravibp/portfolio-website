@@ -44,15 +44,16 @@
     }
     li {
       width: 90px;
-      padding: 10px 0px;
       border-radius: 3px;
-      a {
-        padding: 15px;
-        font-size: 17px;
-      }
-      a:hover {
+      button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
         cursor: pointer;
-        text-decoration: initial;
+        outline: inherit;
+        padding: 10px;
+        font-size: 17px;
       }
     }
     &__profile-name {
@@ -65,12 +66,8 @@
     }
 
     &__rightLinks {
-      a {
+      button {
         font-size: 15px !important;
-      }
-      a:hover {
-        text-decoration: initial;
-        color: inherit;
       }
       li:hover {
         background: rgba(200, 200, 200, 0.2);
@@ -87,7 +84,7 @@
     font-weight: bold;
     background-color: #ff5722 !important; // make consistent color as global variable
     transition: 0.5s background-color;
-    a {
+    button {
       color: black !important;
     }
   }
@@ -96,7 +93,7 @@
 .header-commonStyles {
   transition: 1s all;
   .headerLinks {
-    a {
+    button {
       transition: 0.5s background-color;
       color: white !important;
     }
@@ -120,7 +117,7 @@
   }
 
   .headerLinks {
-    a {
+    button {
       color: white !important;
     }
   }
@@ -172,14 +169,14 @@
     li {
       margin: auto;
       width: 130px !important;
-      a {
+      button {
         font-weight: 1000;
       }
     }
     .headerLinks__rightLinks {
       li:last-child {
         margin-top: 20px;
-        > a {
+        > button {
           font-weight: initial !important;
         }
       }
@@ -187,7 +184,7 @@
   }
   .scrolledHeader-style {
     .headerLinks {
-      a {
+      button {
         color: white !important;
       }
     }
@@ -201,7 +198,7 @@
       padding: 6px 30px !important;
     }
     .headerLinks {
-      a {
+      button {
         color: black !important;
       }
     }

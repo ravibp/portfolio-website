@@ -8,12 +8,6 @@ import "mdbreact/dist/css/mdb.css";
 import LandingPage from "myComponents/LandingPage.jsx";
 import ResumeBuild from "myComponents/ResumeBuild.jsx";
 
-console.log(
-  "basename url sad hash",
-  process.env.PUBLIC_URL,
-  window.location,
-  window.history
-);
 ReactDOM.render(
   <HashRouter>
     <Switch>

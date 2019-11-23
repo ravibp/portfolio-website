@@ -16,7 +16,7 @@ class HeaderLinks extends React.Component {
             <div className="col-6 headerLinks__profile-name">
               <Scrollspy items={["landingPage-section"]}>
                 <li>
-                  <a onClick={this.handleScrollToDiv.bind(this, "landingPage-section")}>Ravi BP</a>
+                  <button onClick={() => window.scroll(0, 0)}>Ravi BP</button>
                 </li>
               </Scrollspy>
             </div>
@@ -40,24 +40,24 @@ class HeaderLinks extends React.Component {
               offset={!isMobileOnly ? -10 : -200}
             >
               <li onClick={this.props.handleDrawerToggle}>
-                <a onClick={this.handleScrollToDiv.bind(this, "aboutMe-section")}>About</a>
+                <button onClick={this.handleScrollToDiv.bind(this, "aboutMe-section")}>About</button>
               </li>
               <li onClick={this.props.handleDrawerToggle}>
-                <a onClick={this.handleScrollToDiv.bind(this, "skills-section")}>Skills</a>
+                <button onClick={this.handleScrollToDiv.bind(this, "skills-section")}>Skills</button>
               </li>
               <li onClick={this.props.handleDrawerToggle}>
-                <a onClick={this.handleScrollToDiv.bind(this, "projects-section")}>Projects</a>
+                <button onClick={this.handleScrollToDiv.bind(this, "projects-section")}>Projects</button>
               </li>
               {isMobileOnly && <li onClick={() => {
                 this.props.handleDrawerToggle();
                 window.scroll(0, 0);
               }}>
-                <a>Back to Top</a>
+                <button>Back to Top</button>
               </li>}
             </Scrollspy>
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 }

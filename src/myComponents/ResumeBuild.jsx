@@ -62,7 +62,7 @@ class ResumeBuild extends React.Component {
                             )
                           )}
                         </ul>
-                        {index ==2 && <hr/>}
+                        {index === 2 && <hr />}
                       </div>
                     </div>
                   );
@@ -195,14 +195,14 @@ class ResumeBuild extends React.Component {
                   <h3 className="sectionHeadingGlobal">Languages</h3>
                 </div>
                 <div className="languages__list">
-                {resumeDataObj.languages.map(language => {
-                  var languagesDiv = (
-                    <div>
-                      <p className="descriptionGlobal">{language}</p>
-                    </div>
-                  );
-                  return languagesDiv;
-                })}
+                  {resumeDataObj.languages.map(language => {
+                    var languagesDiv = (
+                      <div>
+                        <p className="descriptionGlobal">{language}</p>
+                      </div>
+                    );
+                    return languagesDiv;
+                  })}
                 </div>
               </div>
             </div>

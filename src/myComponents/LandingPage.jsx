@@ -17,6 +17,7 @@ import Skills from "myComponents/Sections/Skills.jsx";
 import Footer from "myComponents/Footer/Footer.jsx";
 import "./LandingPage.scss";
 import * as ImagesJSON from 'assets/img/Images.json';
+import {handleAos} from "./GlobalConstants";
 
 const Images = ImagesJSON.default;
 const isMobileOnly = window.innerWidth <= 767 ? true : false;
@@ -32,7 +33,6 @@ class LandingPage extends React.Component {
     appComponent.style.opacity = "0";
     appComponent.style.height = "100vh";
     appComponent.style.overflowY = "hidden";
-
   }
   componentDidMount() {
     if (!isMobileOnly) {
@@ -43,9 +43,7 @@ class LandingPage extends React.Component {
       document.getElementById('aboutMe-section').style.backgroundImage = `url(${Images.sections.aboutMe.bgImgMobile})`;
       document.getElementById('skills-section').style.backgroundImage = `url(${Images.sections.skills.bgImgMobile})`;
     }
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
+    window.scrollTo(0, 0);
   }
 
   handleLandingVideo() {
@@ -57,9 +55,7 @@ class LandingPage extends React.Component {
     }
     return [renderedVideo, Images.landingPage.bgVideoThumbnail];
   }
-  handleAnimateDurationDestkop = (duration) => {
-    return (isMobileOnly ? 0 : duration)
-  }
+
   render() {
     const { classes } = this.props;
     return (
@@ -117,10 +113,12 @@ class LandingPage extends React.Component {
         >
           <div id="hamburgerOverlay-ref" className="hamburger-overlay"></div>
           <div className="landingPage-container__sections-container">
-            <AboutMe id="aboutMe-div" handleAnimateDurationDestkop={this.handleAnimateDurationDestkop} />
-            <Skills id="skills-div" handleAnimateDurationDestkop={this.handleAnimateDurationDestkop} />
-            <Projects id="projects-div" handleAnimateDurationDestkop={this.handleAnimateDurationDestkop} />
+            <AboutMe id="aboutMe-div" handleAos={handleAos} />
+            <Skills id="skills-div" handleAos={handleAos} />
+            <Projects id="projects-div" handleAos={handleAos} />
+
             {/* <Hobbies id="hobbies-div" /> */}
+
           </div>
         </div>
         <Footer />

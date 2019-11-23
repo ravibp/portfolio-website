@@ -3,8 +3,7 @@
   transition: opacity 1s;
 }
 #projects-section {
-  overflow-x: hidden;
-  height: 800px;
+  // overflow-x: hidden;
   .projects-container {
     max-width: 1300px;
     margin: auto;
@@ -38,6 +37,10 @@
       }
     }
   }
+  .view-details {
+    background: radial-gradient(#b9d3ff, #e9f6ff8c);
+    padding: 5px 0px;
+  }
 }
 
 // mobile styles
@@ -68,6 +71,7 @@
 // desktop styles
 @media screen and (min-width: 768px) {
   #projects-section {
+    min-height: 800px;
     .projects-heading {
       h1 {
         font-size: 30px;
