@@ -32,11 +32,11 @@ class ResumeBuild extends React.Component {
                   {/* <IconExperience /> */}
                   <h3 className="sectionHeadingGlobal">Experience</h3>
                 </div>
-                {resumeDataObj.experience.projects.map(project => {
+                {resumeDataObj.experience.projects.map((project, index) => {
                   let projectDivision = (
                     <div className="sectionsGlobal__divisionsGlobal">
                       <div className="experience__year yearGlobal">
-                        <p>{project.dateFrom} to</p>
+                        <p>{project.dateFrom} {project.dateTo && "to"}</p>
                         <p>{project.dateTo}</p>
                       </div>
                       <div className="experience__project divisionDetailsGlobal">
@@ -62,6 +62,7 @@ class ResumeBuild extends React.Component {
                             )
                           )}
                         </ul>
+                        {index ==2 && <hr/>}
                       </div>
                     </div>
                   );

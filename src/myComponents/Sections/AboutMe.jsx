@@ -4,6 +4,8 @@ import React from "react";
 import "./AboutMe.scss";
 import ScrollAnimation from "react-animate-on-scroll";
 import * as ImagesJSON from 'assets/img/Images.json';
+import { Link } from "react-router-dom";
+
 const Images = ImagesJSON.default;
 
 class AboutMe extends React.Component {
@@ -75,7 +77,7 @@ class AboutMe extends React.Component {
               duration={handleAnimateDurationDestkop(3)}
             >
               <div className="col-12 aboutMe__cv">
-                <a href="/portfolio-website/resume" target="_blank">
+                <a href={"#resume"} target="_blank">
                   Get My CV
                 </a>
               </div>

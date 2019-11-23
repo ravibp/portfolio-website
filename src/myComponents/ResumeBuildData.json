@@ -1,15 +1,15 @@
 {
   "data": {
     "profileName": "Ravi BP",
-    "currentJobTitle": "Systems Engineer - Full Stack Developer",
+    "currentJobTitle": "Senior Systems Engineer - MERN Stack Developer",
     "expYrs": "2 yrs",
     "introduction": "Experienced Web developer with sound programming and scripting skills. Eager to learn new technologies and adapt quickly to new frameworks. My aim is to apply 'Test driven' approach to develop fast, scalable, secure and responsive websites following agile methodologies.",
     "experience": {
       "projects": [
         {
           "dateFrom": "July-2019",
-          "dateTo": "present",
-          "jobTitle": "Systems Engineer",
+          "dateTo": "Nov-2019",
+          "jobTitle": "Senior Systems Engineer",
           "companyName": "Infosys Ltd",
           "technologyTitle": "Fullstack: React.js - Redux, Node.js, Express.js, Apollo GraphQL, DynamoDB",
           "projectDescription": "Developed API to implement Checkout and Payment feature for user be able to purchase items by adding to cart",
@@ -26,6 +26,7 @@
         {
           "dateFrom": "July-2018",
           "dateTo": "Jun-2019",
+          "jobTitle": "Systems Engineer",
           "companyName": "Infosys Ltd",
           "technologyTitle": "Frontend: React.js - Redux",
           "projectDescription": "Developed a fast, scalable and responsive website for a US based E-Commerce company with test driven approach following agile methodologies.",
@@ -55,8 +56,45 @@
           ]
         },
         {
-          "dateFrom": "01-2016",
-          "dateTo": "07-2016",
+          "dateFrom": "Portfolio Project",
+          "dateTo": "",
+          "jobTitle": "DevConnector Application",
+          "companyName": "Portfolio Project",
+          "technologyTitle": "Fullstack: React.js/ Redux.js, Node.js, Express.js, MongoDB, Postman",
+          "projectDescription": "Social Network App for developers",
+          "projectResponsibilites": [
+            "A small social network app built with the MERN stack.",
+            "It includes authentication, profiles and forum posts."
+          ]
+        },
+        {
+          "dateFrom": "Portfolio Project",
+          "dateTo": "",
+          "jobTitle": "Clipboard Application",
+          "companyName": "Portfolio Project",
+          "technologyTitle": "React.js/ Redux.js, Firebase",
+          "projectDescription": "Clipboard notes App with Login feature",
+          "projectResponsibilites": [
+            "A simple application with CRUD functionality that can be used to create, save, edit notes and access it from any device on the go",
+            "It has google firebase login feature implemented for individual user access and privacy."
+          ]
+        },
+        {
+          "dateFrom": "Portfolio Project",
+          "dateTo": "",
+          "jobTitle": "Arcade Game",
+          "companyName": "Portfolio Project",
+          "technologyTitle": "HTML5, CSS3, JS",
+          "projectDescription": "A simple JS Game of dodging enemies to gain points.",
+          "projectResponsibilites": [
+            "Objective is to reach from start to destination without colliding with incoming enemies",
+            "Player have to score the best points possible with 10 lives in hand within 5 minutes",
+            "It Has 3 difficulty modes for challenging gameplay"
+          ]
+        },
+        {
+          "dateFrom": "Jan-2016",
+          "dateTo": "July-2016",
           "jobTitle": "Intern",
           "companyName": "ISRO Satellite Centre",
           "technologyTitle": "Matlab, VHDL",
@@ -79,41 +117,44 @@
     ],
     "education": [
       {
-        "dateFrom": "08-2013",
-        "dateTo": "07-2017",
+        "dateFrom": "Aug-2013",
+        "dateTo": "July-2017",
         "collegeName": "Bangalore Institute of Technology  |  75.42%",
         "courseName": "Electronics & Communications Engineering, B.E"
       },
       {
-        "dateFrom": "08-2011",
-        "dateTo": "07-2013",
+        "dateFrom": "Aug-2011",
+        "dateTo": "July-2013",
         "collegeName": "Seshadripuram Composite PU College  |  90.5%",
         "courseName": "PCME, P.U.C"
       },
       {
-        "dateFrom": "08-2011",
-        "dateTo": "07-2010",
+        "dateFrom": "Aug-2011",
+        "dateTo": "July-2010",
         "collegeName": "St.Joseph's Indian High School  |  92.96%",
         "courseName": "S.S.L.C"
       }
     ],
     "certificates": [
       {
-        "year": "10-2017",
-        "title": "Front end Web Developer Nanodegree, Udacity."
+        "year": "Nov-2019",
+        "title": "MERN Stack, Udemy."
       },
       {
-        "year": "12-2018",
+        "year": "Jun-2019",
+        "title": "MongoDB Basics, MongoDBUniversity Online."
+      },
+      {
+        "year": "Dec-2018",
         "title": "JavaScript Proficiency Certification, Google Plural Sight."
       },
       {
-        "year": "06-2015",
-        "title": "Object Oriented Programming using C++, NIIT."
-
+        "year": "Oct-2017",
+        "title": "Front end Web Developer Nanodegree, Udacity."
       },
       {
-        "year": "06-2019",
-        "title": "MongoDB Basics, MongoDBUniversity Online."
+        "year": "Jun-2015",
+        "title": "Object Oriented Programming using C++, NIIT."
       }
     ],
     "personalInformation": [
@@ -139,7 +180,7 @@
       },
       {
         "infoHeading": "LinkedIn",
-        "infoDescription": "https://www.linkedin.com/in/ravibp/"
+        "infoDescription": "https://www.linkedin.com/in/ravi-b-p-62612296/"
       }
     ],
     "skills": [
@@ -180,10 +221,14 @@
       },
       {
         "skillName": "Jest/ Enzyme",
-        "rating": "7",
+        "rating": "5",
         "skillDetails": ""
       }
     ],
-    "languages": ["English", "Kannada", "Hindi"]
+    "languages": [
+      "English",
+      "Kannada",
+      "Hindi"
+    ]
   }
 }
