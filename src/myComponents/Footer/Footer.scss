@@ -1,0 +1,58 @@
+.footer-container {
+  background-color: rgb(26, 26, 26);
+  color: white;
+  padding: 30px;
+
+  a {
+    transition: background-color 0.5s;
+    font-weight: 1000;
+    font-size: 15px;
+    border: 1px solid #ff5722e6;
+    background-color: transparent;
+    // padding: 15px;
+    // border-radius: 10px;
+    transition: color 0.5s;
+    color: #ff5722e6 !important;
+    text-decoration: none;
+  }
+  a:hover {
+    transition: background-color 0.5s;
+    background-color: #ff5722b8;
+    transition: color 0.5s, font-weight 0.5s;
+    color: black !important;
+  }
+  .footer {
+    h4 {
+      font-size: 30px;
+    }
+    &__heading {
+      margin-bottom: 25px;
+    }
+    &__contact {
+      input,
+      textarea {
+        display: none;
+      }
+      > p {
+        cursor: text;
+      }
+      > div {
+        margin: 25px 0px;
+        > a {
+          padding: 15px;
+          border-radius: 10px;
+        }
+      }
+    }
+    &__socialMediaLinks {
+      margin: auto;
+      width: 190px;
+      > a {
+        color: #ffffff;
+        margin: auto;
+        font-size: 30px;
+        text-align: center;
+      }
+    }
+  }
+}

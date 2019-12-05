@@ -3,7 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
-import landingPageStyle from "assets/jss/landingPage.jsx";
+import landingPageStyle from "assets/jss/landingPageStyle.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // my components
@@ -110,9 +110,6 @@ class LandingPage extends React.Component {
             <AboutMe id="aboutMe-div" handleAos={handleAos} />
             <Skills id="skills-div" handleAos={handleAos} />
             <Projects id="projects-div" handleAos={handleAos} />
-
-            {/* <Hobbies id="hobbies-div" /> */}
-
           </div>
         </div>
         <Footer />

@@ -4,7 +4,9 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-
+p {
+  margin: 0;
+}
 .landingPage-container {
   text-align: center;
   cursor: default;
