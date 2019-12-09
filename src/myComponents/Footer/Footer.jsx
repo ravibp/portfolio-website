@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.scss";
+import "myComponents/Footer/Footer.scss";
 import ReactContactForm from 'react-mail-form';
 
 class Footer extends React.Component {

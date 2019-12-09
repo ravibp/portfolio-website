@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProjectModal.scss";
+import "myComponents/Sections/ProjectModal.scss";
 import { bootstrapLabelClasses } from "../GlobalConstants";
 import Img from 'react-image'
 

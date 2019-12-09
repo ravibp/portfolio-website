@@ -2,7 +2,7 @@
   "data": {
     "profileName": "Ravi BP",
     "currentJobTitle": "Senior Systems Engineer - MERN Stack Developer",
-    "expYrs": "2 yrs",
+    "expYrs": "2.1 yrs",
     "introduction": "Experienced Web developer with sound programming and scripting skills. Eager to learn new technologies and adapt quickly to new frameworks. My aim is to apply 'Test driven' approach to develop fast, scalable, secure and responsive websites following agile methodologies.",
     "experience": {
       "projects": [
@@ -35,10 +35,10 @@
             "Built re-usable components and front-end libraries to eliminate code duplication.",
             "Developed searchable autosuggestion component to search available items",
             "Developed items list UI which can be filtered by brands or categories to which they belong",
-            "Used Apollo GraphQL in front-end to fetch items information from DB.",
-            "Used Query Components with Apollo to handle API request in the application.",
+            "Used Query Components with Apollo GraphQL to handle API request in the application.",
+            "Performed page optimization by generating Lighthouse Report",
             "Have good understanding of SEO and it's best practices.",
-            "Wrote Unit Tests for UI components using Jest (Unit testing framework) with Enzyme (Testing Utility).",
+            "Wrote Unit Tests for UI components using Jest with Enzyme.",
             "Used Pupeteer (Node Library) to run automated UI testing.",
             "Used Sass with BEM naming for CSS styling."
           ]
@@ -138,6 +138,14 @@
     "certificates": [
       {
         "year": "Nov-2019",
+        "title": "Infosys Certified Global Agile Developer.."
+      },
+      {
+        "year": "Nov-2019",
+        "title": "Infosys Certified React Professional."
+      },
+      {
+        "year": "Nov-2019",
         "title": "MERN Stack, Udemy."
       },
       {
@@ -180,18 +188,18 @@
       },
       {
         "infoHeading": "LinkedIn",
-        "infoDescription": "https://www.linkedin.com/in/ravi-b-p-62612296/"
+        "infoDescription": "https://www.linkedin.com/in/ravibp/"
       }
     ],
     "skills": [
       {
         "skillName": "JavaScript/ CSS/ HTML",
-        "rating": "8",
+        "rating": "9",
         "skillDetails": ""
       },
       {
         "skillName": "React.js - Redux (with React Hooks)",
-        "rating": "8",
+        "rating": "9",
         "skillDetails": ""
       },
       {

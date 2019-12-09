@@ -1,6 +1,6 @@
 import React from "react";
-import "./Header.scss";
-import HeaderLinks from "./HeaderLinks.jsx";
+import "myComponents/Header/Header.scss";
+import HeaderLinks from "myComponents/Header/HeaderLinks.jsx";
 import HamburgerMenu from "react-hamburger-menu";
 const isMobileOnly = window.innerWidth <= 767 ? true : false;
 

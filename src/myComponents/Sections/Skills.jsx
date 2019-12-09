@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import SkillsBar from "myComponents/Sections/SkillsBar.jsx";
-import "./Skills.scss";
+import "myComponents/Sections/Skills.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { ReactComponent as Icon1 } from "assets/icons/Icon1.svg";

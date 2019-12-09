@@ -1,10 +1,6 @@
 import React from "react";
-// @material-ui/core components
 
-import "./AboutMe.scss";
-import * as ImagesJSON from 'assets/img/Images.json';
-
-const Images = ImagesJSON.default;
+import "myComponents/Sections/AboutMe.scss";
 
 class AboutMe extends React.Component {
 
@@ -19,7 +15,7 @@ class AboutMe extends React.Component {
           <div {...handleAos("flip-right", 0, 500, 0)} className="col-12 col-md-3 col-lg-4 ">
             <div className="aboutMe__profImg">
               <img
-                src={Images.sections.aboutMe.aboutMeImg}
+                src={this.props.images.sections.aboutMe.dispersionImage}
                 alt=""
                 ref="profImg-ref"
                 className="profImg"
@@ -44,14 +40,13 @@ class AboutMe extends React.Component {
               As the picture says creating digital art is one of my favorite
               hobbies.
               </p>
-            <div {...handleAos("flip-right", 0, 500, -200)} id="test" className="col-12 aboutMe__cv">
-              <a href={"#resume"} target="_blank" rel="noopener noreferrer">
+            <div {...handleAos("flip-right", 0, 500, -200)} className="col-12 aboutMe__cv">
+              <a href={"https://drive.google.com/file/d/1PnxQyAv6H5wEdWFHBJaO3AiEglQfJml0/view?usp=sharing"} target="_blank" rel="noopener noreferrer">
                 Get My CV
-                </a>
+              </a>
             </div>
             <div {...handleAos("fade-up", 0, 500, -200)} className="col-12 aboutMe__socialMediaLinks">
               <a target="_blank" rel='noopener noreferrer' href="https://www.facebook.com/ravibp95"><i className="fab fa-facebook"></i></a>
-              {/* <a target="_blank" rel='noopener noreferrer' href="https://www.facebook.com/Maverick.M4"><i className="fab fa-twitter"></i></a> */}
               <a target="_blank" rel='noopener noreferrer' href="https://www.linkedin.com/in/ravibp"><i className="fab fa-linkedin"></i></a>
               <a target="_blank" rel='noopener noreferrer' href="https://github.com/ravibp"><i className="fab fa-github"></i></a>
             </div>

@@ -2,8 +2,8 @@ import React from "react";
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
 import { MDBContainer, MDBModal, MDBModalBody, MDBModalHeader } from 'mdbreact';
 
-import "./Projects.scss";
-import ProjectModal from "./ProjectModal";
+import "myComponents/Sections/Projects.scss";
+import ProjectModal from "myComponents/Sections/ProjectModal";
 import * as ProjectsJSON from 'myComponents/Sections/Projects.json';
 
 const projects = ProjectsJSON.default;

@@ -15,12 +15,16 @@ import Projects from "myComponents/Sections/Projects.jsx";
 import Skills from "myComponents/Sections/Skills.jsx";
 // import Hobbies from "myComponents/Sections/Hobbies.jsx";
 import Footer from "myComponents/Footer/Footer.jsx";
-import "./LandingPage.scss";
-import * as ImagesJSON from 'assets/img/Images.json';
-import { handleAos } from "./GlobalConstants";
+import "myComponents/LandingPage.scss";
+import {
+  IMAGES,
+  //  LOCALIMAGES
+} from 'assets/img/Images.js';
+import { handleAos } from "myComponents/GlobalConstants";
 
-const Images = ImagesJSON.default;
 const isMobileOnly = window.innerWidth <= 767 ? true : false;
+const images = IMAGES;
+
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -29,19 +33,19 @@ class LandingPage extends React.Component {
     this.showLoadingScreen()
   }
   showLoadingScreen = () => {
-    // const appComponent = document.getElementById("root");
-    // appComponent.style.opacity = "0";
-    // appComponent.style.height = "100vh";
-    // appComponent.style.overflowY = "hidden";
+    const appComponent = document.getElementById("root");
+    appComponent.style.opacity = "0";
+    appComponent.style.height = "100vh";
+    appComponent.style.overflowY = "hidden";
   }
   componentDidMount() {
     if (!isMobileOnly) {
-      document.getElementById('aboutMe-section').style.backgroundImage = `url(${Images.sections.aboutMe.bgImg})`;
-      document.getElementById('skills-section').style.backgroundImage = `url(${Images.sections.skills.bgImg})`;
+      document.getElementById('aboutMe-section').style.backgroundImage = `url(${images.sections.aboutMe.bgImgAboutMe})`;
+      document.getElementById('skills-section').style.backgroundImage = `url(${images.sections.skills.bgImgSkills})`;
     }
     else {
-      document.getElementById('aboutMe-section').style.backgroundImage = `url(${Images.sections.aboutMe.bgImgMobile})`;
-      document.getElementById('skills-section').style.backgroundImage = `url(${Images.sections.skills.bgImgMobile})`;
+      document.getElementById('aboutMe-section').style.backgroundImage = `url(${images.sections.aboutMe.bgImgAboutMeMobile})`;
+      document.getElementById('skills-section').style.backgroundImage = `url(${images.sections.skills.bgImgSkillsMobile})`;
     }
     window.scrollTo(0, 0);
   }
@@ -49,11 +53,11 @@ class LandingPage extends React.Component {
   handleLandingVideo() {
     let renderedVideo = null;
     if (!isMobileOnly) {
-      renderedVideo = Images.landingPage.bgVideo;
+      renderedVideo = images.landingPage.bgVideo;
     } else {
-      renderedVideo = Images.landingPage.bgVideoMobile;
+      renderedVideo = images.landingPage.bgVideoMobile;
     }
-    return [renderedVideo, Images.landingPage.bgVideoThumbnail];
+    return [renderedVideo, images.landingPage.bgVideoThumbnail];
   }
 
   render() {
@@ -71,10 +75,10 @@ class LandingPage extends React.Component {
                       <div id="f1_container" >
                         <div id="f1_card" >
                           <div className="front face" >
-                            <img src={Images.profileImg[0]} alt="ravi bp 2" />
+                            <img src={images.profileImg[0]} alt="ravi bp 2" />
                           </div>
                           <div className="back face center">
-                            <img src={Images.profileImg[1]} alt="ravi bp 2" />
+                            <img src={images.profileImg[1]} alt="ravi bp 2" />
                           </div>
                         </div>
                       </div>
@@ -107,9 +111,9 @@ class LandingPage extends React.Component {
         >
           <div id="hamburgerOverlay-ref" className="hamburger-overlay"></div>
           <div className="landingPage-container__sections-container">
-            <AboutMe id="aboutMe-div" handleAos={handleAos} />
-            <Skills id="skills-div" handleAos={handleAos} />
-            <Projects id="projects-div" handleAos={handleAos} />
+            <AboutMe id="aboutMe-div" handleAos={handleAos} images={images} />
+            <Skills id="skills-div" handleAos={handleAos} images={images} />
+            <Projects id="projects-div" handleAos={handleAos} images={images} />
           </div>
         </div>
         <Footer />
@@ -118,5 +122,4 @@ class LandingPage extends React.Component {
   }
 }
 
-// export default LandingPage;
 export default withStyles(landingPageStyle)(LandingPage);

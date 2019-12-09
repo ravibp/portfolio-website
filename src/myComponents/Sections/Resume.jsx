@@ -1,5 +1,5 @@
 import React from "react";
-import "./Resume.scss";
+import "myComponents/Sections/Resume.scss";
 import resumeImage from "assets/img/resumeImage.jpg";
 
 class Resume extends React.Component {

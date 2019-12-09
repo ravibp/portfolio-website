@@ -1,6 +1,6 @@
 import React from "react";
 import AnimatedNumber from "animated-number-react";
-import "./SkillsBar.scss";
+import "myComponents/Sections/SkillsBar.scss";
 import { skillsJson } from 'myComponents/Sections/SkillsJson';
 
 const isMobileOnly = window.innerWidth <= 767 ? true : false;

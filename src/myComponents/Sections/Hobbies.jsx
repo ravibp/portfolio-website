@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Hobbies.scss";
+import "myComponents/Sections/Hobbies.scss";
 
 class Hobbies extends React.Component {
   render() {
