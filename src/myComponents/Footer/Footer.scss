@@ -2,29 +2,20 @@
   background-color: rgb(26, 26, 26);
   color: white;
   padding: 30px;
-
-  a {
-    transition: background-color 0.5s;
+  h2,
+  h3 {
     font-weight: 1000;
-    font-size: 15px;
-    border: 1px solid #ff5722e6;
-    background-color: transparent;
-    // padding: 15px;
-    // border-radius: 10px;
-    transition: color 0.5s;
-    color: #ff5722e6 !important;
-    text-decoration: none;
+    font-family: inherit;
+    color: antiquewhite;
   }
-  a:hover {
-    transition: background-color 0.5s;
-    background-color: #ff5722b8;
-    transition: color 0.5s, font-weight 0.5s;
-    color: black !important;
+  h3 {
+    text-decoration: underline;
   }
   .footer {
     h4 {
       font-size: 30px;
     }
+
     &__heading {
       margin-bottom: 25px;
     }
@@ -36,11 +27,25 @@
       > p {
         cursor: text;
       }
-      > div {
+      .email-link {
         margin: 25px 0px;
-        > a {
-          padding: 15px;
+        a {
+          transition: background-color 0.5s;
+          padding: 10px;
           border-radius: 10px;
+          font-weight: 1000;
+          font-size: 15px;
+          background-color: transparent;
+          border: 1px solid;
+          transition: color 0.5s;
+          color: #ff5722e6 !important;
+          text-decoration: none;
+        }
+        a:hover {
+          transition: background-color 0.5s;
+          background-color: #ff5722b8;
+          transition: color 0.5s, font-weight 0.5s;
+          color: black !important;
         }
       }
     }
@@ -48,10 +53,28 @@
       margin: auto;
       width: 190px;
       > a {
-        color: #ffffff;
+        color: #ff5722e6 !important;
         margin: auto;
         font-size: 30px;
         text-align: center;
+      }
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+  .footer-container {
+    .footer {
+      &__contact {
+        .email-link {
+          margin: 15px 0px;
+        }
+      }
+      &__contact,
+      &__links,
+      &__location {
+        margin-bottom: 20px;
       }
     }
   }

@@ -19,9 +19,6 @@ class SkillsBar extends React.Component {
       numberFlag: false
     };
   }
-  handleChange = ({ target: { value } }) => {
-    this.setState({ value });
-  };
   componentDidMount() {
     if (!isMobileOnly) {
       window.addEventListener("scroll", this.populateSkillBar);
