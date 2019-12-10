@@ -18,12 +18,12 @@ import Footer from "myComponents/Footer/Footer.jsx";
 import "myComponents/LandingPage.scss";
 import {
   IMAGES,
-  //  LOCALIMAGES
+  LOCALIMAGES
 } from 'assets/img/Images.js';
 import { handleAos } from "myComponents/GlobalConstants";
 
 const isMobileOnly = window.innerWidth <= 767 ? true : false;
-const images = IMAGES;
+const images = LOCALIMAGES;
 
 
 class LandingPage extends React.Component {
@@ -59,31 +59,33 @@ class LandingPage extends React.Component {
     }
     return [renderedVideo, images.landingPage.bgVideoThumbnail];
   }
-
+  handleScrollToDiv = (id) => {
+    const offset = document.getElementById("profile-section").clientHeight - 50;
+    const sectionPosition = document.getElementById(id).offsetTop;
+    window.scrollTo(0, sectionPosition + offset)
+  }
   render() {
     const { classes } = this.props;
     return (
       <div id="landingPage-section" className="landingPage-container">
         <Header />
-        <div className="profile">
+        <div id="profile-section" className="profile">
           <Parallax filter backgroundVideo={this.handleLandingVideo()}>
             <div className={classes.container}>
               <div className="row">
-                <div className="col-12 col-md-12">
-                  <a href="#aboutMe-section">
-                    <div className="profile__image" >
-                      <div id="f1_container" >
-                        <div id="f1_card" >
-                          <div className="front face" >
-                            <img src={images.profileImg[0]} alt="ravi bp 2" />
-                          </div>
-                          <div className="back face center">
-                            <img src={images.profileImg[1]} alt="ravi bp 2" />
-                          </div>
+                <div style={{ margin: "auto" }}>
+                  <div onClick={this.handleScrollToDiv.bind(this, "aboutMe-section")} className="profile__image" >
+                    <div id="f1_container" >
+                      <div id="f1_card" >
+                        <div className="front face" >
+                          <img src={images.profileImg[0]} alt="ravi bp 2" />
+                        </div>
+                        <div className="back face center">
+                          <img src={images.profileImg[1]} alt="ravi bp 2" />
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </div>
                 </div>
 
                 <div className="col-12 col-md-12">

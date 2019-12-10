@@ -1,46 +1,46 @@
-// // import local images
-// function importAll(r) {
-//   return r.keys().map(r);
-// }
+// import local images
+function importAll(r) {
+  return r.keys().map(r);
+}
 
-// const importedImages = importAll(
-//   require.context("./images", false, /\.(png|jpe?g)$/)
-// );
-// let localImageObj = {};
-// importedImages.forEach(imgUrl => {
-//   let key = imgUrl.split("/")[3].split(".")[0];
-//   localImageObj[key] = imgUrl;
-// });
+const importedImages = importAll(
+  require.context("assets/img/images", false, /\.(png|jpe?g)$/)
+);
+let localImageObj = {};
+importedImages.forEach(imgUrl => {
+  let key = imgUrl.split("/")[imgUrl.split("/").length - 1].split(".")[0];
+  localImageObj[key] = imgUrl;
+});
 
-// export const LOCALIMAGES = {
-//   profileImg: [
-//     localImageObj.profileImg1,
-//     localImageObj.profileImg2,
-//     localImageObj.profileImg3,
-//     localImageObj.profileImg4
-//   ],
-//   landingPage: {
-//     bgVideoThumbnail:
-//       "https://drive.google.com/uc?export=view&id=1-HwPIOC4EQ8t42lumsTWoIq0FbYXuXw8",
-//     bgVideo:
-//       "https://www.dropbox.com/s/ity7airc92n2czg/landingBgVideo.mp4?raw=1",
-//     bgVideoMobile:
-//       "https://www.dropbox.com/s/7uxzm933mde0sex/landingBgVideoMobile.mp4?raw=1"
-//   },
-//   sections: {
-//     aboutMe: {
-//       dispersionImage: localImageObj.dispersionImage,
+export const LOCALIMAGES = {
+  profileImg: [
+    localImageObj.profileImg1,
+    localImageObj.profileImg2,
+    localImageObj.profileImg3,
+    localImageObj.profileImg4
+  ],
+  landingPage: {
+    bgVideoThumbnail:
+      "https://drive.google.com/uc?export=view&id=1-HwPIOC4EQ8t42lumsTWoIq0FbYXuXw8",
+    bgVideo:
+      "https://www.dropbox.com/s/ity7airc92n2czg/landingBgVideo.mp4?raw=1",
+    bgVideoMobile:
+      "https://www.dropbox.com/s/7uxzm933mde0sex/landingBgVideoMobile.mp4?raw=1"
+  },
+  sections: {
+    aboutMe: {
+      dispersionImage: localImageObj.dispersionImage,
 
-//       bgImgAboutMe: localImageObj.bgImgAboutMe,
+      bgImgAboutMe: localImageObj.bgImgAboutMe,
 
-//       bgImgAboutMeMobile: localImageObj.bgImgAboutMeMobile
-//     },
-//     skills: {
-//       bgImgSkills: localImageObj.bgImgSkills,
-//       bgImgSkillsMobile: localImageObj.bgImgSkillsMobile
-//     }
-//   }
-// };
+      bgImgAboutMeMobile: localImageObj.bgImgAboutMeMobile
+    },
+    skills: {
+      bgImgSkills: localImageObj.bgImgSkills,
+      bgImgSkillsMobile: localImageObj.bgImgSkillsMobile
+    }
+  }
+};
 
 export const IMAGES = {
   profileImg: [
