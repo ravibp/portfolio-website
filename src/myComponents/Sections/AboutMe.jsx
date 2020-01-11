@@ -3,7 +3,11 @@ import React from "react";
 import "myComponents/Sections/AboutMe.scss";
 
 class AboutMe extends React.Component {
-
+  handleScrollToDiv = (id) => {
+    const offset = document.getElementById("profile-section").clientHeight - 50;
+    const sectionPosition = document.getElementById(id).offsetTop;
+    window.scrollTo(0, sectionPosition + offset)
+  }
   render() {
     const { handleAos } = this.props;
     return (
@@ -15,7 +19,7 @@ class AboutMe extends React.Component {
           <div {...handleAos("flip-right", 0, 500, 0)} className="col-12 col-md-3 col-lg-4 ">
             <div className="aboutMe__profImg">
               <img
-                src={this.props.images.sections.aboutMe.dispersionImage}
+                src={this.props.images.sections.aboutMe.aboutMeImg}
                 alt=""
                 ref="profImg-ref"
                 className="profImg"
@@ -35,11 +39,7 @@ class AboutMe extends React.Component {
               efficient and elegant code, whether be it HTML, CSS or
               JavaScript. I want to make things that make a difference!
               </p>
-            <p className="col-12">A picture is worth a thousand words...</p>
-            <p className="col-12">
-              As the picture says creating digital art is one of my favorite
-              hobbies.
-              </p>
+            <p className="col-12">Feel free to take a look at my most recent projects on my <span className="projects-anchor" onClick={this.handleScrollToDiv.bind(this, "projects-section")}>Projects page.</span></p>
             <div {...handleAos("flip-right", 0, 500, -200)} className="col-12 aboutMe__cv">
               <a href={"https://drive.google.com/file/d/1PnxQyAv6H5wEdWFHBJaO3AiEglQfJml0/view?usp=sharing"} target="_blank" rel="noopener noreferrer">
                 Get My CV

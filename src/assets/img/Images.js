@@ -12,6 +12,7 @@ importedImages.forEach(imgUrl => {
   localImageObj[key] = imgUrl;
 });
 
+// Local Images
 export const LOCALIMAGES = {
   profileImg: [
     localImageObj.profileImg1,
@@ -21,7 +22,8 @@ export const LOCALIMAGES = {
   ],
   landingPage: {
     bgVideoThumbnail:
-      "https://drive.google.com/uc?export=view&id=1-HwPIOC4EQ8t42lumsTWoIq0FbYXuXw8",
+      // "https://drive.google.com/uc?export=view&id=1-HwPIOC4EQ8t42lumsTWoIq0FbYXuXw8",
+      localImageObj.bgVideoThumbnail,
     bgVideo:
       "https://www.dropbox.com/s/ity7airc92n2czg/landingBgVideo.mp4?raw=1",
     bgVideoMobile:
@@ -29,10 +31,9 @@ export const LOCALIMAGES = {
   },
   sections: {
     aboutMe: {
-      dispersionImage: localImageObj.dispersionImage,
-
+      // aboutMeImg: localImageObj.dispersionImage,
+      aboutMeImg: localImageObj.profileImg5,
       bgImgAboutMe: localImageObj.bgImgAboutMe,
-
       bgImgAboutMeMobile: localImageObj.bgImgAboutMeMobile
     },
     skills: {
@@ -42,6 +43,7 @@ export const LOCALIMAGES = {
   }
 };
 
+// Hosted Images
 export const IMAGES = {
   profileImg: [
     "https://drive.google.com/uc?export=view&id=1LLg6v4pzga46w2gdyefANBwWHgb1zdCW",
@@ -59,7 +61,7 @@ export const IMAGES = {
   },
   sections: {
     aboutMe: {
-      dispersionImage:
+      aboutMeImg:
         "https://drive.google.com/uc?export=view&id=1KwALMxGcAscex54N9Ek_d9XLq5Rfoy1y",
       bgImgAboutMe:
         "https://drive.google.com/uc?export=view&id=1lkIZsfUnst1k7FG8RaHjxKhy4d_kXacV",

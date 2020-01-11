@@ -4,9 +4,9 @@ import { MDBContainer, MDBModal, MDBModalBody, MDBModalHeader } from 'mdbreact';
 
 import "myComponents/Sections/Projects.scss";
 import ProjectModal from "myComponents/Sections/ProjectModal";
-import * as ProjectsJSON from 'myComponents/Sections/Projects.json';
+import { PROJECTS } from 'myComponents/Sections/Projects';
 
-const projects = ProjectsJSON.default;
+const projects = PROJECTS;
 
 const ProjectCard = (props) => {
     const { project } = props

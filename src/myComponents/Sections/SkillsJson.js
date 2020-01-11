@@ -112,7 +112,7 @@ export const skillsJson = [
         skillHandleAos: handleAos("fade-up", 0, 500, -250)
       },
       {
-        skillName: "Angular 4",
+        skillName: "Angular 7",
         skillRating: 60,
         skillId: "skill-angular",
         skillTitleColor: "blue",
