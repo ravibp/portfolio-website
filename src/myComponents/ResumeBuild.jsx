@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./ResumeBuild.scss";
+import "myComponents/ResumeBuild.scss";
 import * as ResumeData from "./ResumeBuildData.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { ReactComponent as IconExperience } from "assets/img/resume/IconExperience.svg";
@@ -12,6 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import { ReactComponent as IconCertificate } from "assets/img/resume/IconCertificate.svg";
 
 const resumeDataObj = ResumeData.default.data;
+
 class ResumeBuild extends React.Component {
   render() {
     return (
@@ -32,11 +33,11 @@ class ResumeBuild extends React.Component {
                   {/* <IconExperience /> */}
                   <h3 className="sectionHeadingGlobal">Experience</h3>
                 </div>
-                {resumeDataObj.experience.projects.map(project => {
+                {resumeDataObj.experience.projects.map((project, index1) => {
                   let projectDivision = (
-                    <div className="sectionsGlobal__divisionsGlobal">
+                    <div key={index1} className="sectionsGlobal__divisionsGlobal">
                       <div className="experience__year yearGlobal">
-                        <p>{project.dateFrom} to</p>
+                        <p>{project.dateFrom} {project.dateTo && "to"}</p>
                         <p>{project.dateTo}</p>
                       </div>
                       <div className="experience__project divisionDetailsGlobal">
@@ -57,11 +58,12 @@ class ResumeBuild extends React.Component {
                         </p>
                         <ul className="experience__project__responsibilityList">
                           {project.projectResponsibilites.map(
-                            responsibility => (
-                              <li className="descriptionGlobal">{responsibility}</li>
+                            (responsibility, index2) => (
+                              <li key={index2} className="descriptionGlobal">{responsibility}</li>
                             )
                           )}
                         </ul>
+                        {index1 === 2 && <hr />}
                       </div>
                     </div>
                   );
@@ -74,9 +76,9 @@ class ResumeBuild extends React.Component {
                   {/* <IconIdea /> */}
                   <h3 className="sectionHeadingGlobal">Hackathon Experience</h3>
                 </div>
-                {resumeDataObj.hackathon.map(hakathonObj => {
+                {resumeDataObj.hackathon.map((hakathonObj, index3) => {
                   let hackathonDivision = (
-                    <div className="hackathon__division">
+                    <div key={index3} className="hackathon__division">
                       <div className="hackathon__project">
                         <h5 className="hackathon__project__jobTitle mainHeadingGlobal">
                           {hakathonObj.title}
@@ -96,9 +98,9 @@ class ResumeBuild extends React.Component {
                   {/* <IconGraduation /> */}
                   <h3 className="sectionHeadingGlobal">Education</h3>
                 </div>
-                {resumeDataObj.education.map(educationObj => {
+                {resumeDataObj.education.map((educationObj, index4) => {
                   let educationDivision = (
-                    <div className="sectionsGlobal__divisionsGlobal">
+                    <div key={index4} className="sectionsGlobal__divisionsGlobal">
                       <div className="education__year yearGlobal">
                         <p>{educationObj.dateFrom} to</p>
                         <p>{educationObj.dateTo}</p>
@@ -122,9 +124,9 @@ class ResumeBuild extends React.Component {
                   {/* <IconCertificate /> */}
                   <h3 className="sectionHeadingGlobal">Certificates</h3>
                 </div>
-                {resumeDataObj.certificates.map(cerfiticateObj => {
+                {resumeDataObj.certificates.map((cerfiticateObj, index5) => {
                   let certificatesDiv = (
-                    <div className="certificates__division sectionsGlobal__divisionsGlobal">
+                    <div key={index5} className="certificates__division sectionsGlobal__divisionsGlobal">
                       <div className="certificates__year yearGlobal">
                         <p>{cerfiticateObj.year}</p>
                       </div>
@@ -145,9 +147,9 @@ class ResumeBuild extends React.Component {
                   {/* <IconPersonalInfo /> */}
                   <h3 className="sectionHeadingGlobal">Personal Info</h3>
                 </div>
-                {resumeDataObj.personalInformation.map(personalInfo => {
+                {resumeDataObj.personalInformation.map((personalInfo, index6) => {
                   var personalInfoDiv = (
-                    <div>
+                    <div key={index6} >
                       <p className="personalInfo__heading subHeadingGlobal">
                         {personalInfo.infoHeading}
                       </p>
@@ -165,9 +167,9 @@ class ResumeBuild extends React.Component {
                   {/* <IconSkills /> */}
                   <h3 className="sectionHeadingGlobal">Skills</h3>
                 </div>
-                {resumeDataObj.skills.map(skill => {
+                {resumeDataObj.skills.map((skill, index8) => {
                   var skillsDiv = (
-                    <div className="skills__division">
+                    <div key={index8} className="skills__division">
                       <div className="skills__heading descriptionGlobal">
                         {skill.skillName}
                       </div>
@@ -194,14 +196,14 @@ class ResumeBuild extends React.Component {
                   <h3 className="sectionHeadingGlobal">Languages</h3>
                 </div>
                 <div className="languages__list">
-                {resumeDataObj.languages.map(language => {
-                  var languagesDiv = (
-                    <div>
-                      <p className="descriptionGlobal">{language}</p>
-                    </div>
-                  );
-                  return languagesDiv;
-                })}
+                  {resumeDataObj.languages.map((language, index9) => {
+                    var languagesDiv = (
+                      <div key={index9} >
+                        <p className="descriptionGlobal">{language}</p>
+                      </div>
+                    );
+                    return languagesDiv;
+                  })}
                 </div>
               </div>
             </div>

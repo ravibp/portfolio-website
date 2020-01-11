@@ -1,51 +1,32 @@
 import React from "react";
-import { MDBBtn } from 'mdbreact';
+import "myComponents/Sections/ProjectModal.scss";
+import { bootstrapLabelClasses } from "../GlobalConstants";
+import Img from 'react-image'
 
-import "./ProjectModal.scss";
-import ScrollAnimation from "react-animate-on-scroll";
-import * as ImagesJSON from 'assets/img/Images.json';
-const Images = ImagesJSON.default;
-
-const projects = [
-  {
-    title: "Sears Parts Direct",
-    secondarytTitle: "E-Commerce Web Application",
-    description: [
-      "At Sears PartsDirect, you can find millions of replacement parts for most major brands of appliances, outdoor power equipment, water heaters and softeners, and more, no matter where you bought the product.",
-      "It's goal is to help new and experienced DIYers quickly find and order the right part, from any device. It involves Cart, purchasing, Account, Offer, rating and tracking order details."
-    ],
-    skillSet:
-      "React.js/ Redux.js, UI/ UX, Node.js, Express.js, Apollo GraphQL, DynamoDB, Jest, Enzyme, Postman, SoupUI ",
-    // imageTemplate: project1
-  }
-];
-const colorClass = [
-  "label-default",
-  "label-primary",
-  "label-info",
-  "label-danger",
-  "label-success",
-  "label-warning"
-];
 class ProjectModal extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = {
+      loading: true
+    }
   }
   render() {
     const { project } = this.props;
+    const { loading } = this.state;
+    const href = this.props.project ? this.props.project.websiteURL : "";
     return (
       <div className="row projectModal-container">
-        <div className="col-6 project-details">
+        <div className="col-12 col-md-6 project-details">
           <h1>{project.title}</h1>
           <h2>{project.secondarytTitle}</h2>
           {project.description.map((desc, index1) => (
-            <p key={index1}>{desc}</p>
+            <li key={index1}>{desc}</li>
           ))}
           <div className="skillSet-list">
             {project.skillSet.split(",").map((skill, index2) => {
               let rand =
-                colorClass[
-                Math.floor(Math.random() * colorClass.length)
+                bootstrapLabelClasses[
+                Math.floor(Math.random() * bootstrapLabelClasses.length)
                 ];
               return (
                 <div key={index2}>
@@ -55,13 +36,26 @@ class ProjectModal extends React.Component {
             })}
           </div>
         </div>
-        <div className="col-6 project-image">
-          <img src={Images.sections.projects.project1} alt="Sears Parts Direct" />
+        <div className="col-12 col-md-6 project-image">
+          <a
+            target="_blank" href={href} rel="noopener noreferrer">
+            <Img  src={project.imageURL} alt={project.title} style={{
+              opacity: loading ? "0" : "100",
+              transition: "opacity 2s"
+            }}
+              onLoad={() => {
+                this.setState({
+                  loading: false,
+                })
+              }}
+              loader={<img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="loading..." />}
+            />
+          </a>
         </div>
         <br />
 
         <div className="col-12 project-websiteLink">
-          <MDBBtn color="primary"><a target="_blank" rel='noopener noreferrer' href={this.props.project ? this.props.project.websiteURL : ""}>View Website</a></MDBBtn>
+          <a target="_blank" rel='noopener noreferrer' href={href}>View Website</a>
         </div>
       </div>
     );

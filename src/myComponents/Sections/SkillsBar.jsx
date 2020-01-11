@@ -1,80 +1,17 @@
 import React from "react";
 import AnimatedNumber from "animated-number-react";
-import "./SkillsBar.scss";
-import { isMobileOnly } from "react-device-detect";
+import "myComponents/Sections/SkillsBar.scss";
+import { skillsJson } from 'myComponents/Sections/SkillsJson';
 
-const skillsJson = [
-  {
-    skillName: "HTML5",
-    skillRating: "90",
-    skillId: "skill-html",
-    skillTitleColor: "darkred",
-    skillBarColor: "#03A9F4"
-  },
-  {
-    skillName: "CSS3",
-    skillRating: "90",
-    skillId: "skill-css",
-    skillTitleColor: "darkblue",
-    skillBarColor: "#03A9F4"
-  },
-  {
-    skillName: "JS",
-    skillRating: "80",
-    skillId: "skill-js",
-    skillTitleColor: "darkgreen",
-    skillBarColor: "#03A9F4"
-  },
-  {
-    skillName: "ReactJs/ Redux",
-    skillRating: "80",
-    skillId: "skill-react",
-    skillTitleColor: "darkyellow",
-    skillBarColor: "#03A9F4"
-  },
-  {
-    skillName: "Angular 4",
-    skillRating: "60",
-    skillId: "skill-angular",
-    skillTitleColor: "blue",
-    skillBarColor: "#03A9F4"
-  },
-  {
-    skillName: "Bootstrap 4",
-    skillRating: "80",
-    skillId: "skill-bootstrap",
-    skillTitleColor: "darkred",
-    skillBarColor: "#03A9F4"
-  },
-  {
-    skillName: "NodeJs",
-    skillRating: "60",
-    skillId: "skill-nodejs",
-    skillTitleColor: "darkblue",
-    skillBarColor: "#03A9F4"
-  },
-  {
-    skillName: "MySQL/ MongoDB",
-    skillRating: "70",
-    skillId: "skill-database",
-    skillTitleColor: "darkyellow",
-    skillBarColor: "#03A9F4"
-  },
-  {
-    skillName: "Apollo GraphQL",
-    skillRating: "50",
-    skillId: "skill-graphql",
-    skillTitleColor: "darkgreen",
-    skillBarColor: "#03A9F4"
-  },
-  {
-    skillName: "Photoshop CC",
-    skillRating: "60",
-    skillId: "skill-photoshop",
-    skillTitleColor: "darkred",
-    skillBarColor: "#03A9F4"
-  }
-];
+const isMobileOnly = window.innerWidth <= 767 ? true : false;
+const skillsArray = [];
+skillsJson.forEach(skillArr =>
+  skillArr.forEach(skillObj => skillsArray.push(skillObj))
+)
+
+skillsArray.sort((a, b) =>
+  (b.skillRating - a.skillRating))
+
 class SkillsBar extends React.Component {
   constructor(props) {
     super(props);
@@ -82,13 +19,10 @@ class SkillsBar extends React.Component {
       numberFlag: false
     };
   }
-  handleChange = ({ target: { value } }) => {
-    this.setState({ value });
-  };
   componentDidMount() {
     if (!isMobileOnly) {
       window.addEventListener("scroll", this.populateSkillBar);
-      skillsJson.forEach(skill => {
+      skillsArray.forEach(skill => {
         document.getElementById(skill.skillId + "-bar").style.width = 0;
         document.getElementById(skill.skillId + "-bar").style.background =
           skill.skillBarColor;
@@ -96,7 +30,7 @@ class SkillsBar extends React.Component {
           "width 2.5s";
       });
     } else {
-      skillsJson.forEach(skill => {
+      skillsArray.forEach(skill => {
         document.getElementById(
           skill.skillId + "-bar"
         ).style.width = `${skill.skillRating}%`;
@@ -111,9 +45,9 @@ class SkillsBar extends React.Component {
       this.setState({
         numberFlag: true
       });
-      skillsJson.forEach(skill => {
+      skillsArray.forEach(skill => {
         document.getElementById(skill.skillId + "-bar").style.transitionDelay =
-          "2s";
+          "1s";
         document.getElementById(
           skill.skillId + "-bar"
         ).style.width = `${skill.skillRating}%`;
@@ -160,10 +94,11 @@ class SkillsBar extends React.Component {
     return false;
   }
   render() {
+    const { handleAos } = this.props
     return (
       <div className="skillBar-container row no-gutters">
-        {skillsJson.map((skill, index) => (
-          <div key={index} className="row col-12 no-gutters">
+        {skillsArray.map((skill, index) => (
+          <div  {...handleAos("fade-left", 0, 500, -250)} key={index} className="row col-12 no-gutters">
             <div className="skillBar-container__title col-3">{skill.skillName}</div>
             <div className="skillBar-container__progressBar col-7">
               <div
@@ -173,7 +108,7 @@ class SkillsBar extends React.Component {
             </div>
             <div className="skillBar-container__progressValue col-2">
               {this.state.numberFlag &&
-                this.showNumber(skill.skillRating, 2500, 2000)}
+                this.showNumber(skill.skillRating, 2500, 1000)}
               {!this.state.numberFlag &&
                 this.showNumber(skill.skillRating, 0, 0)}
             </div>

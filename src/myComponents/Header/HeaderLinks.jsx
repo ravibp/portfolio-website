@@ -1,9 +1,14 @@
 import Scrollspy from "react-scrollspy";
-import { isMobileOnly } from "react-device-detect";
 import React from "react";
 
+const isMobileOnly = window.innerWidth <= 767 ? true : false;
+
 class HeaderLinks extends React.Component {
-  
+  handleScrollToDiv = (id) => {
+    const offset = document.getElementById("profile-section").clientHeight - 50;
+    const sectionPosition = document.getElementById(id).offsetTop;
+    window.scrollTo(0, sectionPosition + offset)
+  }
   render() {
     return (
       <div className="headerLinks">
@@ -12,7 +17,7 @@ class HeaderLinks extends React.Component {
             <div className="col-6 headerLinks__profile-name">
               <Scrollspy items={["landingPage-section"]}>
                 <li>
-                  <a href="#landingPage-section">Ravi BP</a>
+                  <button onClick={() => window.scroll(0, 0)}>Ravi BP</button>
                 </li>
               </Scrollspy>
             </div>
@@ -33,24 +38,27 @@ class HeaderLinks extends React.Component {
                 // "hobbies-section"
               ]}
               currentClassName="is-current"
-              offset={!isMobileOnly? -10: -200}
+              offset={!isMobileOnly ? -10 : -200}
             >
               <li onClick={this.props.handleDrawerToggle}>
-                <a href="#aboutMe-section">About</a>
+                <button onClick={this.handleScrollToDiv.bind(this, "aboutMe-section")}>About</button>
               </li>
               <li onClick={this.props.handleDrawerToggle}>
-                <a href="#skills-section">Skills</a>
+                <button onClick={this.handleScrollToDiv.bind(this, "skills-section")}>Skills</button>
               </li>
               <li onClick={this.props.handleDrawerToggle}>
-                <a href="#projects-section">Projects</a>
+                <button onClick={this.handleScrollToDiv.bind(this, "projects-section")}>Projects</button>
               </li>
-              {/* <li onClick={this.props.handleDrawerToggle}>
-                <a href="#hobbies-section">Gallery</a>
-              </li> */}
+              {isMobileOnly && <li onClick={() => {
+                this.props.handleDrawerToggle();
+                window.scroll(0, 0);
+              }}>
+                <button>Back to Top</button>
+              </li>}
             </Scrollspy>
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 }

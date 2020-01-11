@@ -1,8 +1,8 @@
 import React from "react";
-import "./Header.scss";
-import HeaderLinks from "./HeaderLinks.jsx";
+import "myComponents/Header/Header.scss";
+import HeaderLinks from "myComponents/Header/HeaderLinks.jsx";
 import HamburgerMenu from "react-hamburger-menu";
-import { isMobileOnly } from "react-device-detect";
+const isMobileOnly = window.innerWidth <= 767 ? true : false;
 
 class Header extends React.Component {
   constructor(props) {
@@ -22,10 +22,12 @@ class Header extends React.Component {
         if (this.state.drawerOpenFlag) {
           this.refs["headerNavBar-ref"].classList.remove("drawer-hide");
           this.refs["headerNavBar-ref"].style.marginTop = "0px";
-          // this.refs["pageMask-ref"].style.opacity = "0.7";
+          document.getElementById("hamburgerOverlay-ref").style.background = "#000000bd";
+          document.getElementById("hamburgerOverlay-ref").style.zIndex = "100";
         } else {
           this.refs["headerNavBar-ref"].style.marginTop = "-250px";
-          // this.refs["pageMask-ref"].style.opacity = "0";
+          document.getElementById("hamburgerOverlay-ref").style.zIndex = "0";
+          document.getElementById("hamburgerOverlay-ref").style.background = "transparent";
         }
       }
     );
@@ -45,7 +47,7 @@ class Header extends React.Component {
     this.wrapperRef = node;
   }
   /**
-   * Alert if clicked on outside of element
+   * Toggle on Clicking outside of element
    */
   handleClickOutside(event) {
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
@@ -75,11 +77,10 @@ class Header extends React.Component {
           className="header-container row no-gutters w-100 drawer-hide"
           ref="headerNavBar-ref"
         >
-          {/* <div id="pageMask" ref="pageMask-ref"></div> */}
           <div ref={this.setWrapperRef}>
             <div className="hamburgerMenu-icon">
               <HamburgerMenu
-                isOpen={this.state.drawerOpenFlag}
+                isOpen={this.state.drawerOpenFlag === undefined ? false : this.state.drawerOpenFlag}
                 menuClicked={this.handleDrawerToggle.bind(this)}
                 width={25}
                 height={20}
@@ -113,7 +114,7 @@ class Header extends React.Component {
           <div className="col-12 header-headerLinks">
             <HeaderLinks />
           </div>
-          <hr className="c" />
+          <hr />
         </div>
       );
     }

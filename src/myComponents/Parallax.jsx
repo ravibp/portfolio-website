@@ -10,16 +10,18 @@ class Parallax extends React.Component {
     super(props);
     var windowScrollTop = window.pageYOffset / 3;
     this.state = {
-      transform: "translate3d(0," + windowScrollTop + "px,0)"
+      transform: "translate3d(0," + windowScrollTop + "px,0)",
     };
   }
   showRenderedPage() {
-    // const spinnerComponent = document.querySelector(".loader");
-    // const appComponent = document.querySelector("#root");
-    // appComponent.style.opacity = "1";
-    // appComponent.style.transition = "opacity 1s";
-    // spinnerComponent.style.opacity = "0";
-    // spinnerComponent.style.transition = "opacity 1s";
+    const spinnerComponent = document.querySelector(".loader");
+    const appComponent = document.getElementById("root");
+    spinnerComponent.style.opacity = "0";
+    spinnerComponent.style.transition = "opacity 1s";
+    appComponent.style.opacity = "1";
+    appComponent.style.transition = "opacity 1s";
+    appComponent.style.height = "auto";
+    appComponent.style.overflowY = "visible";
   };
   componentDidMount() {
     var windowScrollTop = window.pageYOffset / 3;
@@ -27,11 +29,16 @@ class Parallax extends React.Component {
       transform: "translate3d(0," + windowScrollTop + "px,0)"
     });
     window.addEventListener("scroll", this.resetTransform);
-
     var videoElement = document.getElementById("landingPage-bgVideo");
+    videoElement.style.background = `url(${this.props.backgroundVideo[1]})`;
+    videoElement.style.backgroundSize = "cover"; 
+    videoElement.style.zoom = "1%"; 
+    setTimeout(() => {
+      this.showRenderedPage();
+    }, 2000);
     videoElement.oncanplay = function () {
-      const parallax = new Parallax()
-      parallax.showRenderedPage();
+      // const parallax = new Parallax()
+      // parallax.showRenderedPage();
     };
   }
 
@@ -76,7 +83,7 @@ class Parallax extends React.Component {
           loop
           id="landingPage-bgVideo"
         >
-          <source src={backgroundVideo} type="video/mp4" />;
+          <source src={backgroundVideo[0]} type="video/mp4" />;
           </video>
         {children}
       </div>

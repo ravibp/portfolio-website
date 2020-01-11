@@ -1,37 +1,25 @@
 import React from "react";
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
-import { MDBContainer, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
+import { MDBContainer, MDBModal, MDBModalBody, MDBModalHeader } from 'mdbreact';
 
-import "./Projects.scss";
-import ProjectModal from "./ProjectModal";
-import ScrollAnimation from "react-animate-on-scroll";
-import * as ImagesJSON from 'assets/img/Images.json';
-import * as ProjectsJSON from 'myComponents/Sections/Projects.json';
+import "myComponents/Sections/Projects.scss";
+import ProjectModal from "myComponents/Sections/ProjectModal";
+import { PROJECTS } from 'myComponents/Sections/Projects';
 
-const Images = ImagesJSON.default;
-const projects = ProjectsJSON.default;
-
-const colorClass = [
-    "label-default",
-    "label-primary",
-    "label-info",
-    "label-danger",
-    "label-success",
-    "label-warning"
-];
+const projects = PROJECTS;
 
 const ProjectCard = (props) => {
     const { project } = props
     return (
-        <MDBCol>
+        <MDBCol className="">
             <MDBCard style={{ maxWidth: "22rem" }}>
-                <MDBCardImage className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" waves />
+                <MDBCardImage alt="project image" className="img-fluid project-image" src={project.imageURL} waves />
                 <MDBCardBody>
                     <MDBCardTitle>{project.title}</MDBCardTitle>
                     <MDBCardText>
                         {project.secondarytTitle}
                     </MDBCardText>
-                    <MDBBtn>View Details</MDBBtn>
+                    <h4 className="view-details">View Details</h4>
                 </MDBCardBody>
             </MDBCard>
         </MDBCol>
@@ -55,20 +43,13 @@ class Projects extends React.Component {
     }
 
     render() {
+        const { handleAos } = this.props;
 
         return (
             <div id="projects-section">
                 <div className="row projects-container">
-                    <div className="col-12 projects-heading">
-                        <ScrollAnimation
-                            animateOnce={true}
-                            offset={0}
-                            delay={1}
-                            animateIn="tada"
-                            initiallyVisible={true}
-                        >
-                            <h1>PROJECTS</h1>
-                        </ScrollAnimation>
+                    <div {...handleAos("fade-up", 0, 500, -250)} className="col-12 projects-heading">
+                        <h1>PROJECTS</h1>
                     </div>
 
                     <MDBContainer>
@@ -76,18 +57,18 @@ class Projects extends React.Component {
                         <div className="projects-list row">
                             {projects.map((project, index1) => {
                                 let projectCard = (
-                                    <div className="col-12 col-md-4 col-lg-3 project-card">
+                                    <div {...handleAos("fade-up", 0, 500, -200)} key={index1} className="col-12 col-md-4 col-lg-3 project-card">
                                         <MDBBtn onClick={() => {
                                             this.toggle()
                                             this.setState({
                                                 project: project
                                             })
-
                                         }}>
                                             <ProjectCard project={project} />
                                         </MDBBtn>
                                     </div>
                                 )
+
                                 return projectCard;
                             })}
                             <MDBModal className="project-modal" isOpen={this.state.modal} toggle={this.toggle} centered size="lg">

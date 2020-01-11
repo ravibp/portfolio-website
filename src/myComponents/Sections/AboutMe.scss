@@ -1,5 +1,5 @@
 #aboutMe-section {
-  overflow-x: hidden;
+  background: #000000ed;
   .aboutMe-container {
     max-width: 1300px;
     margin: auto;
@@ -15,6 +15,10 @@
         p {
           span {
             color: #5b86ff !important;
+          }
+          span.projects-anchor {
+            font-weight: bold;
+            cursor: pointer !important;
           }
         }
       }
@@ -64,7 +68,7 @@
           img {
             max-width: 200px;
             width: 100%;
-            image-orientation: from-image !important;
+            // image-orientation: from-image !important;
           }
         }
         &__details {
