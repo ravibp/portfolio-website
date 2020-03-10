@@ -7,7 +7,7 @@ import { ReactComponent as Icon1 } from "assets/icons/Icon1.svg";
 import { ReactComponent as Icon2 } from "assets/icons/Icon2.svg";
 import { ReactComponent as Icon3 } from "assets/icons/Icon3.svg";
 import ReactTooltip from "react-tooltip";
-import { skillsJson } from 'myComponents/Sections/SkillsJson';
+import { skillsJson, skillsCategory } from 'myComponents/Sections/SkillsJson';
 
 class Skills extends React.Component {
 
@@ -39,6 +39,15 @@ class Skills extends React.Component {
   };
 
   render() {
+    let skillsDiv = [];
+    for (let [key, value] of Object.entries(skillsCategory)) {
+      skillsDiv.push(
+        <div className="skill-divItem">
+          <h6><b>{key}</b></h6>
+          <p>{value}</p>
+        </div>
+      )
+    }
     const { handleAos } = this.props;
     return (
       <div id="skills-section">
@@ -79,6 +88,8 @@ class Skills extends React.Component {
               </div>
             </div>
           </div>
+
+          {/* Skill Bar component */}
           <div
             {...handleAos("zoom-in", 0, 500, -250)}
             className="col-12 col-sm-6 col-md-6 col-lg-5 skills-bar"
@@ -86,21 +97,17 @@ class Skills extends React.Component {
           >
             <SkillsBar handleAos={handleAos} />
           </div>
-
-          <div
-            {...handleAos("fade-up", 0, 500, -250)}
-            className="col-12 col-md-12 skills-details"
-            ref="skills-details-ref"
-          >
-            {skillsJson.map((skillCircle) => (
-              skillCircle.map((skill, index2) => (
-                <div key={index2} className="skills-details__division">
-                  <span className={`label ${skill.skillLabelClass}`}>{skill.skillName}</span>
-                </div>
-              ))
-            ))}
-          </div>
-
+          {/* Skill category component */}
+          {screen.width < 768 && (
+            <div
+              {...handleAos("zoom-in", 0, 500, -250)}
+              className="col-12 col-sm-12 col-md-6 col-lg-5 skills-division"
+            >
+              <div>
+                {skillsDiv}
+              </div>
+            </div>
+          )}
           <div {...handleAos("fade-up", 0, 500, -250)} className="d-block d-lg-none col-12 skills-category">
             {this.displaySkillsCategory()}
           </div>

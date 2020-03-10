@@ -123,3 +123,12 @@ export const skillsJson = [
         skillHandleAos: handleAos("fade-up", 0, 500, -250)
       },]
   ];
+
+  export const skillsCategory = {
+      "Framework": "React.js, Redux, Angular 7, Node.js, Express.js, Jest, Enzyme.",
+      "Scripting/ Markup/ Styling": "Javascript (ES7), HTML 5, CSS 3, Bootstrap 4, Material Bootstrap.",
+      "Database/ QL": "MongoDB, MySQL, DynamoDB, GraphQL.",
+      "IDE’s": "Visual Studio Code, Eclipse.",
+      "Platforms": "Windows family.",
+      "Other Tools": "Git, Jira, BrowserStack, Slack, Postman."
+  }

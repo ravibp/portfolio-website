@@ -41,7 +41,7 @@ class AboutMe extends React.Component {
               </p>
             <p className="col-12">Feel free to take a look at my most recent projects on my <span className="projects-anchor" onClick={this.handleScrollToDiv.bind(this, "projects-section")}>Projects page.</span></p>
             <div {...handleAos("flip-right", 0, 500, -200)} className="col-12 aboutMe__cv">
-              <a href={"https://drive.google.com/file/d/1PnxQyAv6H5wEdWFHBJaO3AiEglQfJml0/view?usp=sharing"} target="_blank" rel="noopener noreferrer">
+              <a href={"https://drive.google.com/open?id=1WCkPHzQ7FD-Wvekf1SPa5VVWXL-pXLmc"} target="_blank" rel="noopener noreferrer">
                 Get My CV
               </a>
             </div>

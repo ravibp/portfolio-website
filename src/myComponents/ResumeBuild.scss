@@ -1,6 +1,6 @@
-$mainHeadingColor: #002e58;
-$subHeadingColor: #343434;
-$sectionLineBreakColor: #d5d6d6;
+$mainHeadingColor: #004c93 !important;
+$subHeadingColor: #343434 !important;
+$sectionLineBreakColor: #d5d6d6 !important;
 %sectionsGlobal {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -36,6 +36,7 @@ $sectionLineBreakColor: #d5d6d6;
   line-height: 20px;
 }
 .resumeBuild-container {
+  text-align: justify;
   div,
   span,
   h1,
@@ -79,23 +80,22 @@ $sectionLineBreakColor: #d5d6d6;
       font-weight: 800 !important;
       font-size: 40px !important;
       line-height: 1.1em;
-      color: #002e58;
+      color: $mainHeadingColor;
     }
     &__title {
       line-height: 1.1em;
-      color: #002e58;
+      // color: #002e58;
       margin-top: 5px;
       font-size: 20px !important;
       font-weight: 400;
     }
     &__introduction {
-      color: #343434;
+      // color: #343434;
       font-size: 13px;
       font-weight: 400;
       margin-top: 8px;
     }
     &__yoe {
-      color: #002e58;
       margin-bottom: 5px;
       font-size: 15px;
     }
@@ -144,6 +144,16 @@ $sectionLineBreakColor: #d5d6d6;
       .headingUnderlineGlobal {
         text-decoration: underline;
       }
+      .professionalSummary {
+        margin-top: 20px;
+        > h3 {
+          border-bottom: 1px solid #d5d6d6;
+        }
+        > ul {
+          margin: 10px 0px 0px 15px ;
+          list-style-type: disc;
+        }
+      }
       // left section styles
       .left-sections {
         width: 70%;
@@ -152,19 +162,14 @@ $sectionLineBreakColor: #d5d6d6;
         vertical-align: top;
         .experience {
           &__project {
-            &__companyName {
-              text-transform: initial;
-              font-style: italic;
-            }
             &__responsibilities {
-              margin: 3px 0px;
               font-weight: bold;
             }
           }
         }
         .education {
           &__project {
-            &__jobTitle {
+            &__projectTitle {
               font-size: 15px !important;
             }
           }
@@ -175,9 +180,6 @@ $sectionLineBreakColor: #d5d6d6;
           }
           &__project {
             margin-left: 20%;
-            &__jobTitle {
-              font-weight: bold;
-            }
           }
         }
         .certificates {
@@ -199,8 +201,14 @@ $sectionLineBreakColor: #d5d6d6;
         }
         .skills {
           &__division {
-            margin-top: 5px;
-            margin-bottom: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            > h6 {
+              font-weight: bold;
+              text-decoration: underline;
+            }
+            > p {
+            }
           }
           &__rating {
             min-height: 10px;
@@ -218,7 +226,6 @@ $sectionLineBreakColor: #d5d6d6;
             background-color: #003d74 !important;
           }
           &__description {
-            // text-align: right;
             text-align: justify;
             color: darkcyan;
           }
@@ -239,8 +246,7 @@ $sectionLineBreakColor: #d5d6d6;
     display: inline-flex;
     border-bottom: 1px solid $sectionLineBreakColor;
     h3 {
-      // margin: 8px 0px 0px 5px;
-      margin: 8px 0px 0px 0px;
+      margin: 10px 0px 0px 0px;
     }
     svg {
       fill: white !important;

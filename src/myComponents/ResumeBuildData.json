@@ -1,125 +1,150 @@
 {
   "data": {
     "profileName": "Ravi BP",
-    "currentJobTitle": "Senior Systems Engineer - MERN Stack Developer",
-    "expYrs": "2.1 yrs",
+    "currentJobTitle": "Senior Systems Engineer",
+    "expYrs": "2.3 yrs",
     "introduction": "Experienced Web developer with sound programming and scripting skills. Eager to learn new technologies and adapt quickly to new frameworks. My aim is to apply 'Test driven' approach to develop fast, scalable, secure and responsive websites following agile methodologies.",
+    "professionalSummary": [
+      "2.3 years of extensive experience in design, development and integration of MEAN/MERN stack applications using React.js with Redux/React Hooks, Angular 7, Node.js, Express.js, MongoDB, MySQL.",
+      "Good knowledge of JavaScript's ES7 standards and its features",
+      "Experience in development of RESTful web services and API testing tool such as Postman.",
+      "Good understanding of SEO and its best practices.",
+      "Hands on experience in Version Control System like SVN, GIT.",
+      "Hands on experience in Agile project and project management tools like JIRA.",
+      "Hands on experience in using IDE like Visual Studio Code, Eclipse.",
+      "Hands on experience in website testing tools such as BrowserStack, Google Lighthouse."
+    ],
+    "workExperience": [
+      "Worked as Senior Systems Engineer at Infosys Private Limited, Bangalore from November 2017 to till date."
+    ],
     "experience": {
       "projects": [
         {
-          "dateFrom": "July-2019",
+          "dateFrom": "July-2018",
           "dateTo": "Nov-2019",
-          "jobTitle": "Senior Systems Engineer",
-          "companyName": "Infosys Ltd",
-          "technologyTitle": "Fullstack: React.js - Redux, Node.js, Express.js, Apollo GraphQL, DynamoDB",
-          "projectDescription": "Developed API to implement Checkout and Payment feature for user be able to purchase items by adding to cart",
-          "projectResponsibilites": [
-            "Analyzed Schema for server-side cart checkout implementation.",
-            "Developed API to perform CRUD operation on cart items and coupons.",
-            "Implemented Coupon feature to provide discount for certain parts.",
-            "Validated API response with GraphQL playground.",
-            "Wrote Unit Tests for server code using moche and karma",
-            "Used Apollo GraphQL in front-end to fetch data for cart implementation.",
-            "Used Query Components with Apollo to handle API request in the client application."
+          "projectTitle": "Sears PartsDirect.",
+          "companyName": "Infosys Ltd.",
+          "role": "Senior Systems Engineer",
+          "clientName": "Sears.",
+          "technologyTitle": "React.js - Redux, Node.js, Express.js, GraphQL, DynamoDB, Jest, Enzyme.",
+          "projectDescription": "Sears Parts Direct is a department store consisting of millions of replacement parts for most major brands of appliances, outdoor power equipment etc. It's goal is to help new and experienced DIYers quickly find and order the right part, from any device.",
+          "projectStack": [
+            {
+              "stack": "Frontend",
+              "description": "Developed a fast, scalable and responsive E-commerce website.",
+              "responsibilities": [
+                "Developed UI designs and wire frames into a functional web page with quality code.",
+                "Built re-usable components and front-end libraries to eliminate code duplication.",
+                "Developed searchable autosuggestion component to search available items.",
+                "Developed filter tree feature to filter items list by their brands or categories.",
+                "Used Query Components with Apollo GraphQL to handle API request in the application.",
+                "Performed page optimization by using Lighthouse Report.",
+                "Have good understanding of SEO and it's best practices.",
+                "Used Jest with Enzyme for writing Unit Tests for UI components.",
+                "Used Pupeteer to run automated UI testing.",
+                "Used Sass with BEM naming for CSS styling."
+              ]
+            },
+            {
+              "stack": "Backend",
+              "description": "Developed API to implement Checkout and Payment feature for user be able to purchase items by adding to cart.",
+              "responsibilities": [
+                "Analyzed Schema for server-side cart checkout implementation.",
+                "Developed API to perform CRUD operation on cart items and coupons.",
+                "Implemented Coupon feature to provide discount for certain parts.",
+                "Validated API response with GraphQL playground.",
+                "Wrote Unit Tests for server code using moche and karma.",
+                "Integrated backend API with the frontend UI and verified the overall functionality of the website."
+              ]
+            }
           ]
         },
         {
-          "dateFrom": "July-2018",
-          "dateTo": "Jun-2019",
-          "jobTitle": "Systems Engineer",
-          "companyName": "Infosys Ltd",
-          "technologyTitle": "Frontend: React.js - Redux",
-          "projectDescription": "Developed a fast, scalable and responsive website for a US based E-Commerce company with test driven approach following agile methodologies.",
+          "dateFrom": "April-2018",
+          "dateTo": "June-2018",
+          "projectTitle": "PMO Employee Portal. (Internal Project)",
+          "companyName": "Infosys Ltd.",
+          "role": "Systems Engineer",
+          "clientName": "",
+          "technologyTitle": "Angular 5, Node.js, Express.js, MySQL, Postman.",
+          "projectDescription": "Developed a MEAN stack application to implement CRUD operations for a portal to manage Employee details.",
           "projectResponsibilites": [
-            "Developed UI designs and wire frames into a functional web page with quality code.",
-            "Built re-usable components and front-end libraries to eliminate code duplication.",
-            "Developed searchable autosuggestion component to search available items",
-            "Developed items list UI which can be filtered by brands or categories to which they belong",
-            "Used Query Components with Apollo GraphQL to handle API request in the application.",
-            "Performed page optimization by generating Lighthouse Report",
-            "Have good understanding of SEO and it's best practices.",
-            "Wrote Unit Tests for UI components using Jest with Enzyme.",
-            "Used Pupeteer (Node Library) to run automated UI testing.",
-            "Used Sass with BEM naming for CSS styling."
+            "Created a Backend server using Node.js and Express.js to handle http requests.",
+            "Created a Relational Database using MySQL for data storage and retrieval.",
+            "Created a Frontend application using Angular 5 and integrated it with the database and server."
           ]
         },
         {
           "dateFrom": "Nov-2017",
-          "dateTo": "June-2018",
-          "companyName": "Infosys Ltd",
-          "technologyTitle": "Angular 5",
-          "projectDescription": "Developed a MEAN stack application to implement CRUD operations for a portal to manage Employee details.",
+          "dateTo": "March-2018",
+          "trainingTitle": "Infosys Freshers Training.",
+          "companyName": "Infosys Ltd.",
+          "role": "Systems Engineer Trainee",
+          "clientName": "",
+          "technologyTitle": "Angular 5, Node.js, Express.js, MySQL, Python, HTML, CSS, Bootstrap.",
+          "projectDescription": "Infosys Freshers Training Program is divided into 2 phases, Generic training and Stream training. Trained on Python fundamentals, Data Structures and Algorithm, Database Languages and Web Development."
+        },
+        {
+          "dateFrom": "Portfolio Project",
+          "dateTo": "",
+          "projectTitle": "DevConnector Application.",
+          "companyName": "",
+          "clientName": "",
+          "technologyTitle": "React.js/ Redux.js, Node.js, Express.js, MongoDB, Postman, Heroku.",
+          "projectDescription": "DevConnector is a Social Network application for developers consisting of various user posts and post discussions.",
           "projectResponsibilites": [
-            "Created a Back-end server using Node.JS and Express.JS to handle http requests.",
-            "Created a Relational Database using MySQL for data storage and retrieval.",
-            "Created a Front-end application using Angular 5 and integrated it with the database and server."
+            "Implemented user registration, login and authentication features.",
+            "Implemented user’s profile page showing the user’s professional information.",
+            "Implemented Forum page containing various posts and discussions."
           ]
         },
         {
           "dateFrom": "Portfolio Project",
           "dateTo": "",
-          "jobTitle": "DevConnector Application",
-          "companyName": "Portfolio Project",
-          "technologyTitle": "Fullstack: React.js/ Redux.js, Node.js, Express.js, MongoDB, Postman",
-          "projectDescription": "Social Network App for developers",
+          "projectTitle": "Clipboard Application.",
+          "companyName": "",
+          "clientName": "",
+          "technologyTitle": "React.js/ Redux.js, Firebase.",
+          "projectDescription": "It is an online notes application with Register and Login feature. The individual notes can be easily copied to clipboard using dedicated copy button.",
           "projectResponsibilites": [
-            "A small social network app built with the MERN stack.",
-            "It includes authentication, profiles and forum posts."
+            "Implemented CRUD functionality that can be used to create, save, edit notes and access it from any device on the go.",
+            "It has google firebase login feature implemented for individual user access and privacy.",
+            "It has a search feature to filter notes by search keywords."
           ]
         },
         {
           "dateFrom": "Portfolio Project",
           "dateTo": "",
-          "jobTitle": "Clipboard Application",
-          "companyName": "Portfolio Project",
-          "technologyTitle": "React.js/ Redux.js, Firebase",
-          "projectDescription": "Clipboard notes App with Login feature",
+          "projectTitle": "Arcade Game.",
+          "companyName": "",
+          "clientName": "",
+          "technologyTitle": "HTML5, CSS3, JS.",
+          "projectDescription": "A basic JS game of dodging incoming enemies to gain points. The game has 3 difficulty modes for challenging gameplay.",
           "projectResponsibilites": [
-            "A simple application with CRUD functionality that can be used to create, save, edit notes and access it from any device on the go",
-            "It has google firebase login feature implemented for individual user access and privacy."
-          ]
-        },
-        {
-          "dateFrom": "Portfolio Project",
-          "dateTo": "",
-          "jobTitle": "Arcade Game",
-          "companyName": "Portfolio Project",
-          "technologyTitle": "HTML5, CSS3, JS",
-          "projectDescription": "A simple JS Game of dodging enemies to gain points.",
-          "projectResponsibilites": [
-            "Objective is to reach from start to destination without colliding with incoming enemies",
-            "Player have to score the best points possible with 10 lives in hand within 5 minutes",
-            "It Has 3 difficulty modes for challenging gameplay"
-          ]
-        },
-        {
-          "dateFrom": "Jan-2016",
-          "dateTo": "July-2016",
-          "jobTitle": "Intern",
-          "companyName": "ISRO Satellite Centre",
-          "technologyTitle": "Matlab, VHDL",
-          "projectDescription": "Developed a Digital Telemetry transmitter prototype for IRS satellites",
-          "projectResponsibilites": [
-            "Applied the knowledge of communication principles in real time transmission of telemetry data.",
-            "Implemented the functionality of Digital Direct Synthesis with a 16-bit NCO.",
-            "Designed a DDS based telemetry system.",
-            "Simulated a Look-Up table based DDS and verified the output by simulating a pseudo code of the origical on MATLAB.",
-            "Synthesized the transmitter functionality onto a PROASIC board, and observed the Phase Modulated output, further updating the currently running frequency values using a MATLAB GUI."
+            "Implemented Player and Enemy characters, with various speed capabilities based on selected difficulty mode.",
+            "Objective is to reach from start to destination without colliding with incoming enemies.",
+            "Player have to score the best points possible with 10 lives in hand within 5 minutes."
           ]
         }
       ]
     },
     "hackathon": [
       {
-        "title": "Infosys Global Hackathon 2019",
+        "title": "Infosys Global Hackathon 2019.",
         "description": "Runner up in \"Infosys Global Hackathon 2019\" at Infosys, Trivandrum DC for developing a mobile application to help the visually challenged people to identify currency notes using Google Cloud Vision. (65 Teams)"
+      }
+    ],
+    "awards": [
+      {
+        "title": "Most Valuable Player.",
+        "description": "Received “MVP Award for Outstanding contribution towards Project Deliverables” award from Infosys."
       }
     ],
     "education": [
       {
         "dateFrom": "Aug-2013",
         "dateTo": "July-2017",
-        "collegeName": "Bangalore Institute of Technology  |  75.42%",
+        "collegeName": "Bangalore Institute of Technology (VTU)  |  75.42%",
         "courseName": "Electronics & Communications Engineering, B.E"
       },
       {
@@ -138,7 +163,7 @@
     "certificates": [
       {
         "year": "Nov-2019",
-        "title": "Infosys Certified Global Agile Developer.."
+        "title": "Infosys Certified Global Agile Developer."
       },
       {
         "year": "Nov-2019",
@@ -188,10 +213,22 @@
       },
       {
         "infoHeading": "LinkedIn",
-        "infoDescription": "https://www.linkedin.com/in/ravibp/"
+        "infoDescription": "https://www.linkedin.com/in/ravibp"
+      },
+      {
+        "infoHeading": "Portfolio",
+        "infoDescription": "https://ravibp.github.io/portfolio-website"
       }
     ],
-    "skills": [
+    "skills": {
+      "Framework": "React.js, Redux.js, Angular 7, Node.js, Express.js, Jest, Enzyme.",
+      "Scripting/ Markup/ Styling": "Javascript (ES7), HTML 5, CSS 3 (SASS), Bootstrap 4, Material Bootstrap.",
+      "Database/ QL": "MongoDB, MySQL, DynamoDB, GraphQL.",
+      "IDE’s": "Visual Studio Code, Eclipse.",
+      "Platforms": "Windows family.",
+      "Other Tools": "Git, Jira, Heroku, BrowserStack, Slack, Postman."
+    },
+    "skillsBar": [
       {
         "skillName": "JavaScript/ CSS/ HTML",
         "rating": "9",
@@ -233,10 +270,6 @@
         "skillDetails": ""
       }
     ],
-    "languages": [
-      "English",
-      "Kannada",
-      "Hindi"
-    ]
+    "languages": ["English", "Kannada", "Hindi"]
   }
 }
