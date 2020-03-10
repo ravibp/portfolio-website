@@ -42,7 +42,7 @@ class Skills extends React.Component {
     let skillsDiv = [];
     for (let [key, value] of Object.entries(skillsCategory)) {
       skillsDiv.push(
-        <div className="skill-divItem">
+        <div key={key} className="skill-divItem">
           <h6><b>{key}</b></h6>
           <p>{value}</p>
         </div>
@@ -74,10 +74,10 @@ class Skills extends React.Component {
                   <span key={index1}>
                     {skillCircle.map((skill, index2) => {
                       return (
-                          <a key={index2} {...skill.skillHandleAos} data-tip={skill.skillName} className={skill.skillClassName}>
-                            <skill.skillIconComponent />
-                            <ReactTooltip place="center" type="dark" effect="solid" />
-                          </a>
+                        <a key={index2} {...skill.skillHandleAos} data-tip={skill.skillName} className={skill.skillClassName}>
+                          <skill.skillIconComponent />
+                          <ReactTooltip place="top" type="dark" effect="solid" />
+                        </a>
                       )
                     })}
 

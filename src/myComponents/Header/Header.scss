@@ -35,34 +35,69 @@
 .header-container {
   position: fixed;
   z-index: 100;
-  .hamburger-overlay {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    background: transparent;
-    transition: all 0.5s;
-    z-index: 0;
-  }
   li {
     list-style: none;
   }
-  .headerLinks {
-    ul {
-      width: 100%;
+
+  ul {
+    display: inline-flex;
+    margin: 0px !important;
+  }
+  li.is-current {
+    font-weight: bold;
+    background-color: #ff5722 !important; // make consistent color as global variable
+    transition: 0.5s background-color;
+    button {
+      color: black !important;
     }
-    li {
-      width: 90px;
-      border-radius: 3px;
-      button {
-        background: none;
-        color: inherit;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        outline: inherit;
-        padding: 10px;
-        font-size: 17px;
+  }
+  .header {
+    &__hamburger-overlay {
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      background: transparent;
+      transition: all 0.5s;
+      z-index: 0;
+    }
+    &__links {
+      ul {
+        width: 100%;
       }
+      li {
+        width: 90px;
+        border-radius: 3px;
+        button {
+          background: none;
+          color: inherit;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          outline: inherit;
+          padding: 10px;
+          font-size: 17px;
+        }
+      }
+    }
+    &__transparentStyle {
+      transition: background-color 0.5s, padding 1s, box-shadow 1s !important;
+      background-color: transparent !important;
+      hr {
+        width: 0%;
+      }
+    }
+    &__commonStyles {
+      transition: 1s all;
+    }
+    &__links {
+      transition: 0.3s all ease-in-out;
+      padding: 20px 30px !important;
+    }
+  }
+  .headerLinks {
+    button {
+      transition: 0.5s background-color;
+      color: white !important;
     }
     &__profile-name {
       font-weight: bold !important;
@@ -83,64 +118,6 @@
       }
     }
   }
-
-  ul {
-    display: inline-flex;
-    margin: 0px !important;
-  }
-  li.is-current {
-    font-weight: bold;
-    background-color: #ff5722 !important; // make consistent color as global variable
-    transition: 0.5s background-color;
-    button {
-      color: black !important;
-    }
-  }
-}
-
-.header-commonStyles {
-  transition: 1s all;
-  .headerLinks {
-    button {
-      transition: 0.5s background-color;
-      color: white !important;
-    }
-  }
-  hr {
-    background-color: red;
-    height: 2px;
-    margin: 0px auto !important;
-    top: 11px;
-  }
-  .header-headerLinks {
-    transition: 0.3s all ease-in-out;
-    padding: 20px 30px !important;
-  }
-}
-.transparentHeader-style {
-  transition: background-color 0.5s, padding 1s, box-shadow 1s !important;
-  background-color: transparent !important;
-  hr {
-    width: 0%;
-  }
-
-  .headerLinks {
-    button {
-      color: white !important;
-    }
-  }
-}
-.scrolledHeader-style {
-  transition: background-color 0.5s, padding 1s, box-shadow 1s !important;
-  background-color: #ffffffeb !important;
-  box-shadow: 1px 1px 16px;
-  hr {
-    transition: 1s width ease-in-out;
-    width: 100% !important;
-  }
-  .header-headerLinks {
-    transition: 0.5s all ease-in-out;
-  }
 }
 
 // mobile
@@ -148,26 +125,6 @@
   .header-container {
     background-color: #9898987d !important;
     transition: margin 0.5s !important;
-    #pageMask {
-      transition: opacity 1s;
-      background-color: black;
-      opacity: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-    .hamburgerMenu-icon {
-      position: fixed !important;
-      z-index: 999;
-      top: 30px;
-      left: 30px;
-      span {
-        background: #ff7600 !important;
-      }
-    }
-
     ul {
       display: block !important;
     }
@@ -178,19 +135,25 @@
         font-weight: 1000;
       }
     }
-    .headerLinks__rightLinks {
-      li:last-child {
-        margin-top: 20px;
-        > button {
-          font-weight: initial !important;
+    .header {
+      &__hamburgerMenu-icon {
+        position: fixed !important;
+        z-index: 999;
+        top: 30px;
+        left: 30px;
+        span {
+          background: #ff7600 !important;
         }
       }
     }
-  }
-  .scrolledHeader-style {
     .headerLinks {
-      button {
-        color: white !important;
+      &__rightLinks {
+        li:last-child {
+          margin-top: 20px;
+          > button {
+            font-weight: initial !important;
+          }
+        }
       }
     }
   }
@@ -198,13 +161,27 @@
 
 // desktop
 @media screen and (min-width: 768px) {
-  .scrolledHeader-style {
-    .header-headerLinks {
-      padding: 6px 30px !important;
-    }
-    .headerLinks {
-      button {
-        color: black !important;
+  .header-container {
+    .header {
+      &__scrolledStyle {
+        transition: background-color 0.5s, padding 1s, box-shadow 1s !important;
+        background-color: #ffffffeb !important;
+        box-shadow: 1px 1px 16px;
+      }
+      &__links {
+        transition: 0.5s all ease-in-out;
+        padding: 6px 30px !important;
+        button {
+          color: black !important;
+        }
+      }
+      hr {
+        transition: 1s width ease-in-out;
+        width: 100% !important;
+        background-color: red;
+        height: 2px;
+        margin: 0px auto !important;
+        top: 11px;
       }
     }
   }

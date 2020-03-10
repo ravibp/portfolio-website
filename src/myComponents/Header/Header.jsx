@@ -26,7 +26,6 @@ class Header extends React.Component {
       },
       () => {
         if (this.state.drawerOpenFlag) {
-          this.hamburgerRef.current.classList.remove("drawer-hide");
           this.hamburgerRef.current.style.marginTop = "0px";
           this.hamburgerOverlayRef.current.style.background = "#000000bd";
           this.hamburgerOverlayRef.current.style.zIndex = "100";
@@ -41,11 +40,11 @@ class Header extends React.Component {
   headerColorChange = () => {
     const windowsScrollTop = window.pageYOffset;
     if (windowsScrollTop > 600) {
-      this.headerNavBarRef.current.classList.add("scrolledHeader-style");
-      this.headerNavBarRef.current.classList.remove("transparentHeader-style");
+      this.headerNavBarRef.current.classList.add("header__scrolledStyle");
+      this.headerNavBarRef.current.classList.remove("header__transparentStyle");
     } else {
-      this.headerNavBarRef.current.classList.remove("scrolledHeader-style");
-      this.headerNavBarRef.current.classList.add("transparentHeader-style");
+      this.headerNavBarRef.current.classList.remove("header__scrolledStyle");
+      this.headerNavBarRef.current.classList.add("header__transparentStyle");
     }
   };
 
@@ -55,7 +54,7 @@ class Header extends React.Component {
   handleClickOutside = (event) => {
     if (this.hamburgerRef && !this.hamburgerRef.current.contains(event.target)) {
       if (this.state.drawerOpenFlag) {
-        this.handleDrawerToggle();
+        // this.handleDrawerToggle();
       }
     }
   }
@@ -83,42 +82,35 @@ class Header extends React.Component {
 
       return (
         <div
-          className="header-container row no-gutters w-100 drawer-hide"
+          className="header-container row no-gutters w-100"
         >
-          <div ref={this.hamburgerOverlayRef} className="hamburger-overlay"></div>
-          <div ref={this.hamburgerRef}>
-            <div className="hamburgerMenu-icon">
-              <HamburgerMenu
-                // isOpen={this.state.drawerOpenFlag === undefined ? false : this.state.drawerOpenFlag}
-                isOpen={false}
-                menuClicked={this.handleDrawerToggle}
-                width={25}
-                height={20}
-                strokeWidth={3}
-                rotate={0}
-                color="white"
-                borderRadius={0}
-                animationDuration={0.5}
-              />
-            </div>
-            <div
-              className="header-container row no-gutters w-100 header-commonStyles"
-            >
-              <div className="col-12 header-headerLinks">
-                <HeaderLinks handleDrawerToggle={this.handleDrawerToggle} />
-              </div>
-              <hr />
-            </div>
+          <div ref={this.hamburgerOverlayRef} className="header__hamburger-overlay"></div>
+          <div className="hamburgerMenu-icon">
+            <HamburgerMenu
+              isOpen={this.state.drawerOpenFlag === undefined ? false : this.state.drawerOpenFlag}
+              menuClicked={this.handleDrawerToggle}
+              width={25}
+              height={20}
+              strokeWidth={3}
+              rotate={0}
+              color="white"
+              borderRadius={0}
+              animationDuration={0.5}
+            />
           </div>
+          <div ref={this.hamburgerRef} className="col-12 header__links">
+            <HeaderLinks handleDrawerToggle={this.handleDrawerToggle} />
+          </div>
+          <hr />
         </div>
       );
     } else {
       return (
         <div
-          className="header-container row no-gutters w-100 header-commonStyles"
+          className="header-container row no-gutters w-100 header__commonStyles"
           ref={this.headerNavBarRef}
         >
-          <div className="col-12 header-headerLinks">
+          <div className="col-12 header__links">
             <HeaderLinks />
           </div>
           <hr />
