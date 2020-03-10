@@ -7,10 +7,16 @@ const isMobileOnly = window.innerWidth <= 767 ? true : false;
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.setWrapperRef = this.setWrapperRef.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
+    if (isMobileOnly) {
+      this.hamburgerRef = React.createRef();
+      this.hamburgerOverlayRef = React.createRef();
+    }
+    else {
+      this.headerNavBarRef = React.createRef();
+
+    }
     this.state = {
-      drawerOpenFlagFlag: false
+      drawerOpenFlag: false
     };
   }
   handleDrawerToggle = () => {
@@ -20,14 +26,14 @@ class Header extends React.Component {
       },
       () => {
         if (this.state.drawerOpenFlag) {
-          this.refs["headerNavBar-ref"].classList.remove("drawer-hide");
-          this.refs["headerNavBar-ref"].style.marginTop = "0px";
-          document.getElementById("hamburgerOverlay-ref").style.background = "#000000bd";
-          document.getElementById("hamburgerOverlay-ref").style.zIndex = "100";
+          this.hamburgerRef.current.classList.remove("drawer-hide");
+          this.hamburgerRef.current.style.marginTop = "0px";
+          this.hamburgerOverlayRef.current.style.background = "#000000bd";
+          this.hamburgerOverlayRef.current.style.zIndex = "100";
         } else {
-          this.refs["headerNavBar-ref"].style.marginTop = "-250px";
-          document.getElementById("hamburgerOverlay-ref").style.zIndex = "0";
-          document.getElementById("hamburgerOverlay-ref").style.background = "transparent";
+          this.hamburgerRef.current.style.marginTop = "-250px";
+          this.hamburgerOverlayRef.current.style.zIndex = "0";
+          this.hamburgerOverlayRef.current.style.background = "transparent";
         }
       }
     );
@@ -35,22 +41,19 @@ class Header extends React.Component {
   headerColorChange = () => {
     const windowsScrollTop = window.pageYOffset;
     if (windowsScrollTop > 600) {
-      this.refs["headerNavBar-ref"].classList.add("scrolledHeader-style");
-      this.refs["headerNavBar-ref"].classList.remove("transparentHeader-style");
+      this.headerNavBarRef.current.classList.add("scrolledHeader-style");
+      this.headerNavBarRef.current.classList.remove("transparentHeader-style");
     } else {
-      this.refs["headerNavBar-ref"].classList.remove("scrolledHeader-style");
-      this.refs["headerNavBar-ref"].classList.add("transparentHeader-style");
+      this.headerNavBarRef.current.classList.remove("scrolledHeader-style");
+      this.headerNavBarRef.current.classList.add("transparentHeader-style");
     }
   };
 
-  setWrapperRef(node) {
-    this.wrapperRef = node;
-  }
   /**
    * Toggle on Clicking outside of element
    */
-  handleClickOutside(event) {
-    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+  handleClickOutside = (event) => {
+    if (this.hamburgerRef && !this.hamburgerRef.current.contains(event.target)) {
       if (this.state.drawerOpenFlag) {
         this.handleDrawerToggle();
       }
@@ -61,27 +64,34 @@ class Header extends React.Component {
     if (isMobileOnly) {
       document.addEventListener("mousedown", this.handleClickOutside);
     }
-    window.addEventListener("scroll", this.headerColorChange);
+    else {
+      window.addEventListener("scroll", this.headerColorChange);
+    }
   }
   componentWillUnmount() {
     if (isMobileOnly) {
       document.removeEventListener("mousedown", this.handleClickOutside);
     }
-    window.removeEventListener("scroll", this.headerColorChange);
+    else {
+      window.removeEventListener("scroll", this.headerColorChange);
+    }
   }
 
   render() {
     if (isMobileOnly) {
+      console.log("state", this.state.drawerOpenFlag);
+
       return (
         <div
           className="header-container row no-gutters w-100 drawer-hide"
-          ref="headerNavBar-ref"
         >
-          <div ref={this.setWrapperRef}>
+          <div ref={this.hamburgerOverlayRef} className="hamburger-overlay"></div>
+          <div ref={this.hamburgerRef}>
             <div className="hamburgerMenu-icon">
               <HamburgerMenu
-                isOpen={this.state.drawerOpenFlag === undefined ? false : this.state.drawerOpenFlag}
-                menuClicked={this.handleDrawerToggle.bind(this)}
+                // isOpen={this.state.drawerOpenFlag === undefined ? false : this.state.drawerOpenFlag}
+                isOpen={false}
+                menuClicked={this.handleDrawerToggle}
                 width={25}
                 height={20}
                 strokeWidth={3}
@@ -92,14 +102,12 @@ class Header extends React.Component {
               />
             </div>
             <div
-              id="headerNavBar"
               className="header-container row no-gutters w-100 header-commonStyles"
-              ref="headerNavBar-ref"
             >
-              <div id="headerLinksId" className="col-12 header-headerLinks">
+              <div className="col-12 header-headerLinks">
                 <HeaderLinks handleDrawerToggle={this.handleDrawerToggle} />
               </div>
-              <hr className="c" />
+              <hr />
             </div>
           </div>
         </div>
@@ -107,9 +115,8 @@ class Header extends React.Component {
     } else {
       return (
         <div
-          id="headerNavBar"
           className="header-container row no-gutters w-100 header-commonStyles"
-          ref="headerNavBar-ref"
+          ref={this.headerNavBarRef}
         >
           <div className="col-12 header-headerLinks">
             <HeaderLinks />

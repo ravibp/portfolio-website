@@ -29,7 +29,6 @@ const images = LOCALIMAGES;
 class LandingPage extends React.Component {
   constructor(props) {
     super(props);
-    this.handleLandingVideo = this.handleLandingVideo.bind(this);
     this.showLoadingScreen()
   }
   showLoadingScreen = () => {
@@ -50,7 +49,7 @@ class LandingPage extends React.Component {
     window.scrollTo(0, 0);
   }
 
-  handleLandingVideo() {
+  handleLandingVideo = () => {
     let renderedVideo = null;
     if (!isMobileOnly) {
       renderedVideo = images.landingPage.bgVideo;
@@ -74,18 +73,38 @@ class LandingPage extends React.Component {
             <div className={classes.container}>
               <div className="row">
                 <div style={{ margin: "auto" }}>
-                  <div onClick={this.handleScrollToDiv.bind(this, "aboutMe-section")} className="profile__image" >
-                    <div id="f1_container" >
-                      <div id="f1_card" >
-                        <div className="front face" >
-                          <img src={images.profileImg[0]} alt="ravi bp 2" />
-                        </div>
-                        <div className="back face center">
-                          <img src={images.profileImg[1]} alt="ravi bp 2" />
+                  {!isMobileOnly && (
+                    <div
+                      onClick={() => this.handleScrollToDiv("aboutMe-section")}
+                      className="profile__image" >
+                      <div id="f1_container" >
+                        <div id="f1_card" >
+                          <div className="front face" >
+                            <img src={images.profileImg[0]} alt="ravi bp 2" />
+                          </div>
+                          <div className="back face center">
+                            <img src={images.profileImg[1]} alt="ravi bp 2" />
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  )}
+                  {isMobileOnly && (
+                    <div
+                      className="profile__image" >
+                      <div id="f1_container" >
+                        <div id="f1_card" >
+                          <div className="front face" >
+                            <img src={images.profileImg[0]} alt="ravi bp 2" />
+                          </div>
+                          {/* <div className="back face center">
+                            <img src={images.profileImg[1]} alt="ravi bp 2" />
+                          </div> */}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                 </div>
 
                 <div className="col-12 col-md-12">
@@ -111,7 +130,6 @@ class LandingPage extends React.Component {
             classes.mainRaised + "  ml-0 mr-0 pl-0 pr-0"
           )}
         >
-          <div id="hamburgerOverlay-ref" className="hamburger-overlay"></div>
           <div className="landingPage-container__sections-container">
             <AboutMe id="aboutMe-div" handleAos={handleAos} images={images} />
             <Skills id="skills-div" handleAos={handleAos} images={images} />

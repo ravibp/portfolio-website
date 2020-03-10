@@ -41,13 +41,13 @@ class HeaderLinks extends React.Component {
               offset={!isMobileOnly ? -10 : -200}
             >
               <li onClick={this.props.handleDrawerToggle}>
-                <button onClick={this.handleScrollToDiv.bind(this, "aboutMe-section")}>About</button>
+                <button onClick={() => this.handleScrollToDiv("aboutMe-section")}>About</button>
               </li>
               <li onClick={this.props.handleDrawerToggle}>
-                <button onClick={this.handleScrollToDiv.bind(this, "skills-section")}>Skills</button>
+                <button onClick={() => this.handleScrollToDiv("skills-section")}>Skills</button>
               </li>
               <li onClick={this.props.handleDrawerToggle}>
-                <button onClick={this.handleScrollToDiv.bind(this, "projects-section")}>Projects</button>
+                <button onClick={() => this.handleScrollToDiv("projects-section")}>Projects</button>
               </li>
               {isMobileOnly && <li onClick={() => {
                 this.props.handleDrawerToggle();

@@ -98,7 +98,7 @@ class SkillsBar extends React.Component {
     return (
       <div className="skillBar-container row no-gutters">
         {skillsArray.map((skill, index) => (
-          <div  {...handleAos("fade-left", 0, 500, -250)} key={index} className="row col-12 no-gutters">
+          <div {...handleAos("fade-left", 0, 500, -250)} key={index} className="row col-12 no-gutters">
             <div className="skillBar-container__title col-3">{skill.skillName}</div>
             <div className="skillBar-container__progressBar col-7">
               <div

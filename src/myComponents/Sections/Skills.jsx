@@ -74,12 +74,10 @@ class Skills extends React.Component {
                   <span key={index1}>
                     {skillCircle.map((skill, index2) => {
                       return (
-                        <Fragment key={index2}>
-                          <a {...skill.skillHandleAos} data-tip={skill.skillName} className={skill.skillClassName}>
+                          <a key={index2} {...skill.skillHandleAos} data-tip={skill.skillName} className={skill.skillClassName}>
                             <skill.skillIconComponent />
+                            <ReactTooltip place="center" type="dark" effect="solid" />
                           </a>
-                          <ReactTooltip place="top" type="dark" effect="solid" />
-                        </Fragment>
                       )
                     })}
 

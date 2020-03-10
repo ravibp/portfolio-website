@@ -64,14 +64,7 @@ p {
 
 // mobile
 @media screen and (max-width: 767px) {
-  .hamburger-overlay {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    background: transparent;
-    transition: all 0.5s;
-    z-index: 0;
-  }
+
   .profile {
     &__title {
       h1 {
