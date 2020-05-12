@@ -78,8 +78,6 @@ class Header extends React.Component {
 
   render() {
     if (isMobileOnly) {
-      console.log("state", this.state.drawerOpenFlag);
-
       return (
         <div
           className="header-container row no-gutters w-100"
